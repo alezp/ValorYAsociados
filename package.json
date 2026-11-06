@@ -1,0 +1,10 @@
+{
+  "name": "estudio-juridico-valor-y-asociados",
+  "version": "1.0.0",
+  "description": "Landing Page Estudio Jurídico Valor y Asociados",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}
