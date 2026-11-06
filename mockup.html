@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figma Prototype Mockup - Estudio Jurídico Valor y Asociados</title>
+  
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       FIGMA WORKSPACE UI STYLES (DARK MODERN IDE)
+       ========================================================================== */
+    :root {
+      --figma-bg: #1e1e1e;
+      --figma-panel: #2c2c2c;
+      --figma-panel-border: #383838;
+      --figma-header: #222222;
+      --figma-text: #ffffff;
+      --figma-text-muted: #8e8e8e;
+      --figma-blue: #0d99ff;
+      --figma-blue-hover: #007be5;
+      --figma-canvas: #121212;
+      --figma-canvas-grid: #1c1c1c;
+
+      /* Design System Tokens de Valor y Asociados */
+      --brand-navy: #0F2744;
+      --brand-gold: #C99C3B;
+      --brand-green: #3F6048;
+      --brand-cream: #FBF9F5;
+      --brand-sand: #F2EEE6;
+      --brand-text: #1D2633;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--figma-bg);
+      color: var(--figma-text);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 1. FIGMA TOP TOOLBAR */
+    .figma-toolbar {
+      height: 48px;
+      background: var(--figma-header);
+      border-bottom: 1px solid var(--figma-panel-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      z-index: 100;
+    }
+
+    .toolbar-left, .toolbar-center, .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .figma-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    .figma-logo-icon {
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(135deg, #f24e1e, #ff7262, #a259ff, #1abcfe, #0acf83);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .project-name {
+      font-size: 0.85rem;
+      color: var(--figma-text-muted);
+      border-left: 1px solid var(--figma-panel-border);
+      padding-left: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .project-name strong {
+      color: #fff;
+    }
+
+    .tool-group {
+      display: flex;
+      background: var(--figma-panel);
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+      border: 1px solid var(--figma-panel-border);
+    }
+
+    .tool-btn {
+      background: none;
+      border: none;
+      color: var(--figma-text-muted);
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .tool-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .tool-btn.active {
+      color: #fff;
+      background: var(--figma-blue);
+    }
+
+    .share-btn {
+      background: var(--figma-blue);
+      color: #fff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .share-btn:hover {
+      background: var(--figma-blue-hover);
+    }
+
+    .play-proto-btn {
+      background: #0acf83;
+      color: #fff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    /* 2. FIGMA MAIN BODY */
+    .figma-body {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* SIDEBAR IZQUIERDA: LAYERS / PAGES */
+    .figma-sidebar-left {
+      width: 250px;
+      background: var(--figma-panel);
+      border-right: 1px solid var(--figma-panel-border);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      z-index: 10;
+    }
+
+    .sidebar-section-title {
+      padding: 12px 14px 6px 14px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--figma-text-muted);
+      font-weight: 700;
+    }
+
+    .layer-item {
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .layer-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+    }
+
+    .layer-item.active {
+      background: rgba(13, 153, 255, 0.18);
+      color: var(--figma-blue);
+      font-weight: 600;
+    }
+
+    .layer-icon {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    /* CANVAS CENTRAL */
+    .figma-canvas {
+      flex: 1;
+      background-color: var(--figma-canvas);
+      background-image: 
+        radial-gradient(var(--figma-canvas-grid) 1.5px, transparent 1.5px);
+      background-size: 24px 24px;
+      overflow: auto;
+      position: relative;
+      display: flex;
+      padding: 60px;
+      gap: 70px;
+      align-items: flex-start;
+      transition: transform 0.2s ease;
+    }
+
+    /* MARCOS DE FIGMA (FRAMES) */
+    .figma-frame-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .frame-title-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--figma-text-muted);
+      font-weight: 600;
+    }
+
+    .frame-title-bar i {
+      color: #a259ff;
+    }
+
+    .frame-title-bar .frame-dim {
+      font-size: 0.72rem;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* MOCKUP CONTAINER - DESKTOP */
+    .mockup-frame {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #1d2633;
+      user-select: text;
+      position: relative;
+    }
+
+    .mockup-frame.desktop {
+      width: 1080px;
+      height: 820px;
+      overflow-y: auto;
+    }
+
+    /* MOCKUP CONTAINER - MOBILE */
+    .mockup-frame.mobile {
+      width: 375px;
+      height: 740px;
+      overflow-y: auto;
+      border-radius: 36px;
+      border: 8px solid #2a2a2a;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    /* MOCKUP CONTAINER - DESIGN SYSTEM */
+    .mockup-frame.design-system {
+      width: 580px;
+      background: #181b20;
+      color: #fff;
+      padding: 24px;
+      border-radius: 12px;
+    }
+
+    /* SIDEBAR DERECHA: INSPECT / DESIGN PROPERTIES */
+    .figma-sidebar-right {
+      width: 290px;
+      background: var(--figma-panel);
+      border-left: 1px solid var(--figma-panel-border);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      z-index: 10;
+    }
+
+    .inspect-tabs {
+      display: flex;
+      border-bottom: 1px solid var(--figma-panel-border);
+    }
+
+    .inspect-tab {
+      flex: 1;
+      padding: 12px 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      background: none;
+      border: none;
+      color: var(--figma-text-muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+
+    .inspect-tab.active {
+      color: #fff;
+      border-bottom-color: var(--figma-blue);
+    }
+
+    .inspect-content {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .prop-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    .prop-label {
+      color: var(--figma-text-muted);
+    }
+
+    .prop-val {
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 3px 6px;
+      border-radius: 4px;
+    }
+
+    .color-swatch-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.04);
+      margin-bottom: 6px;
+    }
+
+    .color-preview {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .code-box {
+      background: #151515;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: #79c0ff;
+      line-height: 1.4;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    /* BOTÓN COPIAR CSS */
+    .btn-copy {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 0.74rem;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: background 0.15s;
+    }
+
+    .btn-copy:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    /* ESTILOS INTERNOS DE LA MAQUETA (UI PREVIEW) */
+    .mockup-header {
+      background: #0f2744;
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #c99c3b;
+    }
+
+    .mockup-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mockup-hero {
+      background: linear-gradient(135deg, #091729, #0f2744);
+      color: #fff;
+      padding: 50px 30px;
+      position: relative;
+    }
+
+    .mockup-areas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 30px 20px;
+      background: #fbf9f5;
+    }
+
+    .mockup-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      overflow: hidden;
+      border: 1px solid #e5dec9;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mockup-card-header {
+      padding: 16px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .mockup-card-body {
+      padding: 16px;
+      font-size: 0.8rem;
+      flex: 1;
+    }
+
+    .mockup-pill-btn {
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+    }
+
+    /* IFRAME EMBED EN MOCKUP PARA TOTAL FIDELIDAD */
+    .live-preview-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #fbf9f5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. BARRA SUPERIOR DE FIGMA -->
+  <header class="figma-toolbar">
+    <div class="toolbar-left">
+      <div class="figma-logo">
+        <div class="figma-logo-icon">F</div>
+        <span>Figma Studio</span>
+      </div>
+      <div class="project-name">
+        <span>Estudio Jurídico</span>
+        <strong>Valor y Asociados</strong>
+        <span style="font-size: 0.72rem; color: #0acf83;">• v2.4 Prototype</span>
+      </div>
+    </div>
+
+    <!-- Herramientas centrales -->
+    <div class="toolbar-center">
+      <div class="tool-group">
+        <button class="tool-btn active" id="toolMove" title="Move Tool (V)"><i class="fa-solid fa-arrow-pointer"></i></button>
+        <button class="tool-btn" id="toolFrame" title="Frame (F)"><i class="fa-solid fa-hashtag"></i></button>
+        <button class="tool-btn" id="toolText" title="Text (T)"><i class="fa-solid fa-font"></i></button>
+        <button class="tool-btn" id="toolZoomIn" title="Acercar (+)"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+        <button class="tool-btn" id="toolZoomOut" title="Alejar (-)"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+        <button class="tool-btn" id="toolResetZoom" title="100%">100%</button>
+      </div>
+
+      <div class="tool-group">
+        <button class="tool-btn active" id="btnViewAll" onclick="switchView('all')">Todos</button>
+        <button class="tool-btn" id="btnViewDesktop" onclick="switchView('desktop')"><i class="fa-solid fa-display"></i> Desktop</button>
+        <button class="tool-btn" id="btnViewMobile" onclick="switchView('mobile')"><i class="fa-solid fa-mobile-screen"></i> Mobile</button>
+        <button class="tool-btn" id="btnViewTokens" onclick="switchView('tokens')"><i class="fa-solid fa-palette"></i> Design System</button>
+      </div>
+    </div>
+
+    <div class="toolbar-right">
+      <button class="play-proto-btn" onclick="openPrototypeLive()">
+        <i class="fa-solid fa-play"></i> Present (Play)
+      </button>
+      <button class="share-btn" onclick="copyProjectShare()">
+        <i class="fa-solid fa-share-nodes"></i> Compartir
+      </button>
+    </div>
+  </header>
+
+  <!-- 2. CUERPO DE FIGMA -->
+  <div class="figma-body">
+
+    <!-- SIDEBAR IZQUIERDA: CAPAS Y FRAMES -->
+    <aside class="figma-sidebar-left">
+      <div class="sidebar-section-title">Páginas y Marcos</div>
+      <div class="layer-item active" onclick="focusFrame('frameDesktop')">
+        <span class="layer-icon"><i class="fa-solid fa-hashtag" style="color: #a259ff;"></i></span>
+        <span>Desktop - 1440px Landing</span>
+      </div>
+      <div class="layer-item" onclick="focusFrame('frameMobile')">
+        <span class="layer-icon"><i class="fa-solid fa-hashtag" style="color: #a259ff;"></i></span>
+        <span>Mobile - iPhone 14/15</span>
+      </div>
+      <div class="layer-item" onclick="focusFrame('frameTokens')">
+        <span class="layer-icon"><i class="fa-solid fa-swatchbook" style="color: #0d99ff;"></i></span>
+        <span>Design System Tokens</span>
+      </div>
+
+      <div class="sidebar-section-title" style="margin-top: 14px;">Componentes UI del Flyer</div>
+      <div class="layer-item" onclick="inspectComponent('Área Penal (Card)', 'penal')">
+        <span class="layer-icon"><i class="fa-solid fa-cube" style="color: #1a3a5c;"></i></span>
+        <span>Card: Área Penal</span>
+      </div>
+      <div class="layer-item" onclick="inspectComponent('Área Civil (Card)', 'civil')">
+        <span class="layer-icon"><i class="fa-solid fa-cube" style="color: #3b5c43;"></i></span>
+        <span>Card: Área Civil</span>
+      </div>
+      <div class="layer-item" onclick="inspectComponent('Jubilados (Card)', 'jubilados')">
+        <span class="layer-icon"><i class="fa-solid fa-cube" style="color: #c99c3b;"></i></span>
+        <span>Card: Jubilados/ANSES</span>
+      </div>
+      <div class="layer-item" onclick="inspectComponent('Chatbot Widget', 'chatbot')">
+        <span class="layer-icon"><i class="fa-solid fa-robot" style="color: #0d99ff;"></i></span>
+        <span>Widget: Bot Legal IA</span>
+      </div>
+      <div class="layer-item" onclick="inspectComponent('Talones Recortables', 'tear')">
+        <span class="layer-icon"><i class="fa-solid fa-scissors" style="color: #25d366;"></i></span>
+        <span>Tear-Strip Cupón</span>
+      </div>
+    </aside>
+
+    <!-- LIENZO DE DISEÑO (CANVAS) -->
+    <main class="figma-canvas" id="canvasViewport">
+
+      <!-- MARCO 1: DESKTOP LANDING (1440px) -->
+      <div class="figma-frame-wrapper" id="frameDesktop">
+        <div class="frame-title-bar">
+          <i class="fa-solid fa-hashtag"></i>
+          <span>Desktop Landing Page</span>
+          <span class="frame-dim">1080 x 820</span>
+        </div>
+        <div class="mockup-frame desktop">
+          <!-- Vista en vivo interactiva usando el index.html del proyecto -->
+          <iframe src="index.html" class="live-preview-iframe" id="desktopIframe" title="Desktop Mockup"></iframe>
+        </div>
+      </div>
+
+      <!-- MARCO 2: MOBILE (iPhone 375px) -->
+      <div class="figma-frame-wrapper" id="frameMobile">
+        <div class="frame-title-bar">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <span>Mobile Device (iOS / Android)</span>
+          <span class="frame-dim">375 x 740</span>
+        </div>
+        <div class="mockup-frame mobile">
+          <iframe src="index.html" class="live-preview-iframe" id="mobileIframe" title="Mobile Mockup"></iframe>
+        </div>
+      </div>
+
+      <!-- MARCO 3: DESIGN SYSTEM TOKENS & UI KIT -->
+      <div class="figma-frame-wrapper" id="frameTokens">
+        <div class="frame-title-bar">
+          <i class="fa-solid fa-swatchbook"></i>
+          <span>Design Tokens & Guidelines (Multifocales Clean Style)</span>
+          <span class="frame-dim">580 x Auto</span>
+        </div>
+        <div class="mockup-frame design-system">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #fff; margin-bottom: 4px;">
+            VALOR Y ASOCIADOS
+          </h3>
+          <p style="font-size: 0.8rem; color: #8e8e8e; margin-bottom: 20px;">
+            Guía de Estilos UI, Paleta Oficial y Componentes Reutilizables.
+          </p>
+
+          <!-- Paleta de Colores -->
+          <h4 style="font-size: 0.85rem; color: var(--figma-blue); margin-bottom: 10px; text-transform: uppercase;">1. Color Palette</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 24px;">
+            <div class="color-swatch-item">
+              <div class="color-preview" style="background: #0F2744;"></div>
+              <div>
+                <strong style="font-size: 0.8rem; display: block;">Primary Navy</strong>
+                <span style="font-size: 0.7rem; color: #888;">#0F2744 • Institucional</span>
+              </div>
+            </div>
+            <div class="color-swatch-item">
+              <div class="color-preview" style="background: #C99C3B;"></div>
+              <div>
+                <strong style="font-size: 0.8rem; display: block;">Accent Gold</strong>
+                <span style="font-size: 0.7rem; color: #888;">#C99C3B • Convicción</span>
+              </div>
+            </div>
+            <div class="color-swatch-item">
+              <div class="color-preview" style="background: #3F6048;"></div>
+              <div>
+                <strong style="font-size: 0.8rem; display: block;">Flyer Olive Green</strong>
+                <span style="font-size: 0.7rem; color: #888;">#3F6048 • Área Civil</span>
+              </div>
+            </div>
+            <div class="color-swatch-item">
+              <div class="color-preview" style="background: #FBF9F5; border: 1px solid #444;"></div>
+              <div>
+                <strong style="font-size: 0.8rem; display: block; color: #ddd;">Cream Clean Surface</strong>
+                <span style="font-size: 0.7rem; color: #888;">#FBF9F5 • multifocales.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tipografía -->
+          <h4 style="font-size: 0.85rem; color: var(--figma-blue); margin-bottom: 10px; text-transform: uppercase;">2. Typography System</h4>
+          <div style="background: rgba(255,255,255,0.04); padding: 14px; border-radius: 8px; margin-bottom: 24px;">
+            <div style="margin-bottom: 10px;">
+              <span style="font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; display: block; color: #fff;">
+                Playfair Display (Serif)
+              </span>
+              <span style="font-size: 0.72rem; color: #8e8e8e;">H1, H2, H3 - Títulos Institucionales, Autoridad y Solidez</span>
+            </div>
+            <div>
+              <span style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; display: block; color: #ddd;">
+                Inter (Sans-Serif Modern)
+              </span>
+              <span style="font-size: 0.72rem; color: #8e8e8e;">Cuerpo, Botones, Inputs, Chatbot - Máxima legibilidad en móviles</span>
+            </div>
+          </div>
+
+          <!-- Componentes Clave -->
+          <h4 style="font-size: 0.85rem; color: var(--figma-blue); margin-bottom: 10px; text-transform: uppercase;">3. Interactive Components</h4>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+            <button class="mockup-pill-btn" style="background: #C99C3B; color: #fff;">Button Primary</button>
+            <button class="mockup-pill-btn" style="background: #25D366; color: #fff;"><i class="fa-brands fa-whatsapp"></i> WhatsApp CTA</button>
+            <button class="mockup-pill-btn" style="background: transparent; border: 1.5px solid #0F2744; color: #fff;">Outline Button</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- SIDEBAR DERECHA: INSPECT / CSS CODE PANEL -->
+    <aside class="figma-sidebar-right">
+      <div class="inspect-tabs">
+        <button class="inspect-tab active" id="tabDesign">Design</button>
+        <button class="inspect-tab" id="tabInspect">Inspect (CSS)</button>
+      </div>
+
+      <div class="inspect-content" id="inspectPanel">
+        <!-- Contenido dinámico al seleccionar elementos -->
+        <div>
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--figma-text-muted); font-weight: 700;">Componente Seleccionado</span>
+          <h4 id="selectedCompName" style="color: #fff; font-size: 0.95rem; margin-top: 4px;">Landing Page Principal</h4>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="prop-row">
+            <span class="prop-label">Ancho (Desktop)</span>
+            <span class="prop-val" id="propWidth">1440 px (Fluid)</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-label">Ancho (Mobile)</span>
+            <span class="prop-val" id="propMobileWidth">375 px (Responsive)</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-label">Border Radius</span>
+            <span class="prop-val" id="propRadius">14px (md) / 22px (lg)</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-label">Sombras</span>
+            <span class="prop-val" id="propShadow">0 10px 30px rgba(...)</span>
+          </div>
+        </div>
+
+        <div>
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--figma-text-muted); font-weight: 700; margin-bottom: 8px; display: block;">Código CSS del Componente</span>
+          <div class="code-box" id="inspectCssBox">/* Token Styles */
+--primary-navy: #0F2744;
+--accent-gold: #C99C3B;
+--accent-green: #3F6048;
+border-radius: 14px;
+box-shadow: 0 10px 30px rgba(15,39,68,0.09);</div>
+        </div>
+
+        <button class="btn-copy" onclick="copyCssSnippet()">
+          <i class="fa-solid fa-copy"></i> Copiar Código CSS
+        </button>
+
+        <div style="border-top: 1px solid var(--figma-panel-border); padding-top: 14px;">
+          <span style="font-size: 0.72rem; color: var(--figma-text-muted); display: block; margin-bottom: 8px;">ENLACE DIRECTO DEL PROTOTIPO:</span>
+          <a href="index.html" target="_blank" style="font-size: 0.8rem; color: var(--figma-blue); display: flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Landing Page en vivo
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script>
+    // Zoom Canvas Controller
+    let currentZoom = 1;
+    const canvas = document.getElementById('canvasViewport');
+
+    document.getElementById('toolZoomIn').addEventListener('click', () => {
+      currentZoom = Math.min(currentZoom + 0.15, 1.8);
+      applyZoom();
+    });
+
+    document.getElementById('toolZoomOut').addEventListener('click', () => {
+      currentZoom = Math.max(currentZoom - 0.15, 0.45);
+      applyZoom();
+    });
+
+    document.getElementById('toolResetZoom').addEventListener('click', () => {
+      currentZoom = 1;
+      applyZoom();
+    });
+
+    function applyZoom() {
+      canvas.style.transform = `scale(${currentZoom})`;
+      canvas.style.transformOrigin = 'top left';
+      document.getElementById('toolResetZoom').textContent = Math.round(currentZoom * 100) + '%';
+    }
+
+    // Switch Views
+    function switchView(view) {
+      document.getElementById('frameDesktop').style.display = (view === 'all' || view === 'desktop') ? 'flex' : 'none';
+      document.getElementById('frameMobile').style.display = (view === 'all' || view === 'mobile') ? 'flex' : 'none';
+      document.getElementById('frameTokens').style.display = (view === 'all' || view === 'tokens') ? 'flex' : 'none';
+
+      document.querySelectorAll('.tool-group button').forEach(b => b.classList.remove('active'));
+      if (view === 'all') document.getElementById('btnViewAll').classList.add('active');
+      if (view === 'desktop') document.getElementById('btnViewDesktop').classList.add('active');
+      if (view === 'mobile') document.getElementById('btnViewMobile').classList.add('active');
+      if (view === 'tokens') document.getElementById('btnViewTokens').classList.add('active');
+    }
+
+    function focusFrame(frameId) {
+      const el = document.getElementById(frameId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+      }
+    }
+
+    // Inspección de Componentes
+    const COMPONENT_DATA = {
+      penal: {
+        name: "Card: Área Penal (Flyer)",
+        w: "360px",
+        h: "Auto",
+        radius: "22px",
+        shadow: "0 10px 30px rgba(15,39,68,0.09)",
+        css: `background: #ffffff;
+border-radius: 22px;
+border: 1px solid #e5dec9;
+header: linear-gradient(135deg, #1a3a5c, #0b1f33);
+font-family: 'Playfair Display', serif;`
+      },
+      civil: {
+        name: "Card: Área Civil & Comercial",
+        w: "360px",
+        h: "Auto",
+        radius: "22px",
+        shadow: "0 10px 30px rgba(15,39,68,0.09)",
+        css: `background: #ffffff;
+border-radius: 22px;
+header: linear-gradient(135deg, #3b5c43, #203525);
+highlight-box: #edf4ee (border: #3f6048);`
+      },
+      jubilados: {
+        name: "Card: Jubilados y Pensionados (ANSES)",
+        w: "360px",
+        h: "Auto",
+        radius: "22px",
+        shadow: "0 10px 30px rgba(15,39,68,0.09)",
+        css: `background: #ffffff;
+border-radius: 22px;
+header: linear-gradient(135deg, #533924, #362315);
+accent-cta: #c99c3b;`
+      },
+      chatbot: {
+        name: "Widget: Bot Legal con Derivación",
+        w: "370px",
+        h: "540px",
+        radius: "22px",
+        shadow: "0 16px 50px rgba(0,0,0,0.28)",
+        css: `position: fixed;
+bottom: calc(20px + env(safe-area-inset-bottom));
+right: calc(18px + env(safe-area-inset-right));
+border-radius: 22px;
+header: #0f2744 (border-bottom: 2px solid #c99c3b);`
+      },
+      tear: {
+        name: "Talones Recortables 'Arrancá tu teléfono'",
+        w: "105px",
+        h: "140px",
+        radius: "8px",
+        shadow: "none",
+        css: `border: 1.5px dashed #c0b48e;
+writing-mode: vertical-rl;
+transform: rotate(180deg);
+color: #0f2744; font-weight: 700;`
+      }
+    };
+
+    function inspectComponent(name, key) {
+      const data = COMPONENT_DATA[key];
+      if (!data) return;
+
+      document.getElementById('selectedCompName').textContent = data.name;
+      document.getElementById('propWidth').textContent = data.w;
+      document.getElementById('propRadius').textContent = data.radius;
+      document.getElementById('propShadow').textContent = data.shadow;
+      document.getElementById('inspectCssBox').textContent = data.css;
+
+      // Scroll hacia el marco Desktop
+      focusFrame('frameDesktop');
+    }
+
+    function copyCssSnippet() {
+      const css = document.getElementById('inspectCssBox').textContent;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(css);
+        alert("¡Código CSS del componente copiado al portapapeles!");
+      }
+    }
+
+    function openPrototypeLive() {
+      window.open('index.html', '_blank');
+    }
+
+    function copyProjectShare() {
+      navigator.clipboard.writeText(window.location.href);
+      alert("Enlace del mockup copiado para compartir con tu equipo.");
+    }
+  </script>
+</body>
+</html>
