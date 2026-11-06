@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estudio Jurídico Valor y Asociados | Asesoramiento y Representación Legal en Argentina</title>
+  <title>Estudio JurÃ­dico Valor y Asociados | Asesoramiento y RepresentaciÃ³n Legal en Argentina</title>
   
   <!-- Meta SEO -->
-  <meta name="description" content="Estudio Jurídico Valor y Asociados. Asesoramiento y representación legal en Área Penal, Civil, y Jubilados y Pensionados. Sedes en CABA, Tucumán y Santiago del Estero. Tu tranquilidad, nuestra prioridad.">
+  <meta name="description" content="Estudio JurÃ­dico Valor y Asociados. Asesoramiento y representaciÃ³n legal en Ãrea Penal, Civil, y Jubilados y Pensionados. Sedes en CABA, TucumÃ¡n y Santiago del Estero. Tu tranquilidad, nuestra prioridad.">
   <meta name="keywords" content="abogados argentina, estudio juridico valor y asociados, abogado penalista, sucesiones, accidentes, jubilados descuentos anses, caba, tucuman, santiago del estero">
   <meta name="author" content="Valor y Asociados">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Estudio Jurídico Valor y Asociados | Asesoramiento Legal">
+  <meta property="og:title" content="Estudio JurÃ­dico Valor y Asociados | Asesoramiento Legal">
   <meta property="og:description" content="Tu tranquilidad, nuestra prioridad. Especialistas en Derecho Penal, Civil y Previsional en toda Argentina.">
   <meta property="og:type" content="website">
 
@@ -23,6 +23,1805 @@
 
   <!-- Estilos del Proyecto -->
   <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <style>
+/* ==========================================================================
+   ESTUDIO JURÍDICO VALOR Y ASOCIADOS
+   Hoja de estilos principal - Inspirada en estética limpia y sobria
+   Paleta: Azul Profundo, Verde Oliva Legal, Dorado Champagne, Marfil y Blanco
+   ========================================================================== */
+
+:root {
+  /* Colores Principales */
+  --primary-navy: #0f2744;       /* Azul marino institucional */
+  --primary-navy-dark: #091729;
+  --primary-navy-light: #1c3b64;
+  --accent-gold: #c99c3b;        /* Dorado sobrio */
+  --accent-gold-light: #e5bf65;
+  --accent-green: #3f6048;       /* Verde oliva legal del flyer */
+  --accent-green-light: #527a5d;
+  --accent-green-soft: #eef4f0;
+  --bg-cream: #fbf9f5;           /* Fondo marfil suave / multifocales clean */
+  --bg-sand: #f2eee6;
+  --bg-card: #ffffff;
+  --text-main: #1d2633;
+  --text-muted: #5e6d82;
+  --text-light: #ffffff;
+  --border-light: #e5dec9;
+  --border-subtle: #eaeaea;
+
+  /* Colores de las 3 áreas del flyer */
+  --penal-color: #1a3a5c;
+  --penal-bg: #edf3f8;
+  --civil-color: #3b5c43;
+  --civil-bg: #edf4ee;
+  --jubilados-color: #533924;
+  --jubilados-bg: #f7f0e9;
+
+  /* Tipografías */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-accent: 'Cinzel', serif;
+
+  /* Sombras y Radios */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+  --shadow-subtle: 0 4px 20px rgba(15, 39, 68, 0.05);
+  --shadow-medium: 0 10px 30px rgba(15, 39, 68, 0.09);
+  --shadow-heavy: 0 20px 45px rgba(15, 39, 68, 0.16);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset y base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-cream);
+  color: var(--text-main);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Tipografía Utilitaria */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--primary-navy);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-tag::before, .section-tag::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--accent-gold);
+}
+
+.section-title {
+  font-size: 2.3rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 50px auto;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   TOPBAR & NAVBAR
+   ========================================================================== */
+.topbar {
+  background: var(--primary-navy-dark);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(201, 156, 59, 0.25);
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topbar-left, .topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topbar-item i {
+  color: var(--accent-gold);
+}
+
+.topbar-item a:hover {
+  color: var(--accent-gold-light);
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 990;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary-navy), var(--primary-navy-light));
+  color: var(--accent-gold);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border: 1px solid var(--accent-gold);
+  box-shadow: var(--shadow-subtle);
+}
+
+.brand-text h1 {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.brand-text span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--accent-green);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--primary-navy);
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-navy), var(--primary-navy-light));
+  color: var(--text-light);
+  box-shadow: 0 4px 15px rgba(15, 39, 68, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--primary-navy-dark);
+  color: var(--accent-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(15, 39, 68, 0.35);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--accent-gold), #b3882e);
+  color: var(--text-light);
+  box-shadow: 0 4px 15px rgba(201, 156, 59, 0.35);
+}
+
+.btn-gold:hover {
+  background: #a37924;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--primary-navy);
+  color: var(--primary-navy);
+}
+
+.btn-outline:hover {
+  background: var(--primary-navy);
+  color: var(--text-light);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+  background: #1eb956;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary-navy);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   BANNER SLIDER (HERO DINÁMICO)
+   ========================================================================== */
+.hero-slider-section {
+  position: relative;
+  width: 100%;
+  min-height: 540px;
+  background: var(--primary-navy-dark);
+  overflow: hidden;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 540px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(9, 23, 41, 0.92) 0%,
+    rgba(15, 39, 68, 0.85) 50%,
+    rgba(15, 39, 68, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.slide-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(201, 156, 59, 0.25);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold-light);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.slide-title {
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.18;
+}
+
+.slide-subtitle {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+.slide-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Controles de slider */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: var(--transition);
+}
+
+.slider-btn:hover {
+  background: var(--accent-gold);
+  color: var(--primary-navy-dark);
+}
+
+.slider-btn.prev {
+  left: 20px;
+}
+
+.slider-btn.next {
+  right: 20px;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.slider-dot.active {
+  background: var(--accent-gold);
+  width: 32px;
+  border-radius: var(--radius-full);
+}
+
+/* ==========================================================================
+   BANNER DE PROPUESTA DE VALOR / PILARES
+   ========================================================================== */
+.pillars-bar {
+  background: #ffffff;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: var(--shadow-subtle);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.pillar-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 18px;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.pillar-item:last-child {
+  border-right: none;
+}
+
+.pillar-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--bg-sand);
+  color: var(--accent-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.pillar-text h4 {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.pillar-text p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   SECCIÓN DE ÁREAS DE PRÁCTICA (LAS 3 DEL FLYER)
+   ========================================================================== */
+.areas-section {
+  padding: 90px 0;
+  background: var(--bg-cream);
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.area-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.area-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-heavy);
+}
+
+/* Cabeceras específicas por área */
+.area-header {
+  padding: 30px 24px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+.area-header.penal {
+  background: linear-gradient(135deg, var(--penal-color), #0b1f33);
+}
+
+.area-header.civil {
+  background: linear-gradient(135deg, var(--civil-color), #203525);
+}
+
+.area-header.jubilados {
+  background: linear-gradient(135deg, var(--jubilados-color), #362315);
+}
+
+.area-badge-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.area-header h3 {
+  color: #ffffff;
+  font-size: 1.55rem;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.area-question {
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent-gold-light);
+  line-height: 1.35;
+}
+
+.area-body {
+  padding: 28px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Resaltado del área civil con preguntas de ejemplo */
+.civil-highlight-box {
+  background: var(--civil-bg);
+  border-left: 3px solid var(--accent-green);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 18px;
+  font-size: 0.85rem;
+  color: var(--civil-color);
+}
+
+.civil-highlight-box ul {
+  list-style: none;
+}
+
+.civil-highlight-box li {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.civil-highlight-box li i {
+  color: var(--accent-green);
+  margin-top: 3px;
+  font-size: 0.8rem;
+}
+
+/* Lista de servicios */
+.services-list {
+  list-style: none;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.services-list li {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  padding: 8px 0;
+  border-bottom: 1px dashed #eee;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.services-list li:last-child {
+  border-bottom: none;
+}
+
+.services-list li i {
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.area-card.penal .services-list li i {
+  color: var(--penal-color);
+}
+
+.area-card.civil .services-list li i {
+  color: var(--civil-color);
+}
+
+.area-card.jubilados .services-list li i {
+  color: var(--accent-gold);
+}
+
+.area-footer {
+  margin-top: auto;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.area-slogan {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--primary-navy);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.btn-area {
+  width: 100%;
+}
+
+/* ==========================================================================
+   SECCIÓN DE VIDEOS EXPLICATIVOS
+   ========================================================================== */
+.videos-section {
+  padding: 85px 0;
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.videos-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.video-card {
+  background: var(--bg-cream);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.video-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.video-card:hover .video-thumb-wrap img {
+  transform: scale(1.05);
+}
+
+.play-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(201, 156, 59, 0.9);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  transition: var(--transition);
+}
+
+.video-card:hover .play-badge {
+  transform: translate(-50%, -50%) scale(1.15);
+  background: var(--accent-gold);
+}
+
+.video-info {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-category {
+  font-size: 0.75rem;
+  color: var(--accent-green);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.video-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.video-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+/* ==========================================================================
+   SECCIÓN DE FORMULARIO DE CONSULTA & PROVINCIA
+   ========================================================================== */
+.consultation-section {
+  padding: 95px 0;
+  background: linear-gradient(135deg, var(--primary-navy-dark) 0%, var(--primary-navy) 100%);
+  color: #ffffff;
+  position: relative;
+}
+
+.consultation-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 15% 50%, rgba(201, 156, 59, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.consultation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.consultation-info h2 {
+  color: #ffffff;
+  font-size: 2.6rem;
+  margin-bottom: 18px;
+}
+
+.consultation-info p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+}
+
+.benefits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.benefit-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(201, 156, 59, 0.2);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.benefit-text strong {
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.benefit-text span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Card del Formulario */
+.consultation-card {
+  background: #ffffff;
+  color: var(--text-main);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-heavy);
+  border-top: 5px solid var(--accent-gold);
+}
+
+.consultation-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.consultation-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: #fdfdfd;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(201, 156, 59, 0.15);
+}
+
+textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-badge-provincia {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--accent-green-soft);
+  color: var(--accent-green);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   SEDES Y CONTACTO OFICIAL
+   ========================================================================== */
+.sedes-section {
+  padding: 85px 0 60px 0;
+  background: var(--bg-sand);
+}
+
+.sedes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-bottom: 50px;
+}
+
+.sede-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-subtle);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.sede-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-medium);
+}
+
+.sede-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px auto;
+  border-radius: 50%;
+  background: var(--bg-cream);
+  color: var(--primary-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 1px solid var(--border-light);
+}
+
+.sede-card h4 {
+  font-size: 1.35rem;
+  margin-bottom: 6px;
+}
+
+.sede-subtitle {
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+}
+
+.sede-address {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   ARRANCÁ TU TELÉFONO DE CONTACTO (FLYER INTERACTIVO)
+   ========================================================================== */
+.tear-strip-section {
+  background: #ffffff;
+  padding: 40px 0 60px 0;
+  border-top: 2px dashed #d6cca9;
+  position: relative;
+}
+
+.tear-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.tear-header h4 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary-navy);
+}
+
+.tear-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.tear-tabs-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.tear-tab {
+  background: #faf8f2;
+  border: 1.5px dashed #c0b48e;
+  border-radius: var(--radius-sm);
+  padding: 16px 14px;
+  text-align: center;
+  width: 110px;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+
+.tear-tab:hover {
+  transform: translateY(6px);
+  background: #fff8e7;
+  border-color: var(--accent-gold);
+}
+
+.tear-tab.torn {
+  opacity: 0.35;
+  transform: translateY(20px) rotate(4deg);
+  pointer-events: none;
+}
+
+.tear-phone {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 1px;
+  margin: 0 auto;
+  display: block;
+}
+
+.tear-tab i {
+  display: block;
+  font-size: 1.1rem;
+  color: #25d366;
+  margin-bottom: 10px;
+}
+
+.tear-action-hint {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 8px;
+  display: block;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+  background: var(--primary-navy-dark);
+  color: #ffffff;
+  padding: 70px 0 24px 0;
+  border-top: 3px solid var(--accent-gold);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-brand h3 {
+  color: #ffffff;
+  font-size: 1.45rem;
+  margin-bottom: 8px;
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  background: var(--accent-gold);
+  color: var(--primary-navy-dark);
+}
+
+.footer-col h4 {
+  color: var(--accent-gold-light);
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.88rem;
+}
+
+.footer-links a:hover {
+  color: var(--accent-gold);
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ==========================================================================
+   CHATBOT LEGAL INNOVADOR (ASISTENTE VIRTUAL CON DERIVACIÓN HUMANA)
+   ========================================================================== */
+.chatbot-widget {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Botón flotante */
+.chatbot-trigger {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-navy), var(--accent-gold));
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 8px 25px rgba(15, 39, 68, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.chatbot-trigger:hover {
+  transform: scale(1.08);
+}
+
+.chatbot-badge-alert {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e63946;
+  border: 2px solid #ffffff;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ventana del Chatbot */
+.chatbot-window {
+  width: 380px;
+  height: 570px;
+  max-height: calc(100vh - 120px);
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.28);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: bottom right;
+}
+
+.chatbot-window.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* Cabecera del Bot */
+.chatbot-header {
+  background: linear-gradient(135deg, var(--primary-navy), var(--primary-navy-dark));
+  color: #ffffff;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--accent-gold);
+}
+
+.chatbot-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chatbot-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(201, 156, 59, 0.25);
+  border: 1.5px solid var(--accent-gold);
+  color: var(--accent-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #25d366;
+  border: 2px solid var(--primary-navy);
+}
+
+.chatbot-title h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.chatbot-title span {
+  font-size: 0.72rem;
+  color: var(--accent-gold-light);
+  display: block;
+}
+
+.chatbot-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chat-btn-icon {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px;
+  transition: var(--transition);
+}
+
+.chat-btn-icon:hover {
+  color: #ffffff;
+}
+
+/* Área de Mensajes */
+.chatbot-messages {
+  flex: 1;
+  padding: 18px;
+  overflow-y: auto;
+  background: #f7f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.message {
+  max-width: 82%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  animation: messageAppear 0.3s ease;
+}
+
+@keyframes messageAppear {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message.bot {
+  background: #ffffff;
+  color: var(--text-main);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  border: 1px solid #e9edf1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.message.user {
+  background: var(--primary-navy);
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.message-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.chat-option-btn {
+  background: #edf3f8;
+  color: var(--primary-navy);
+  border: 1px solid #d4e2ed;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-option-btn:hover {
+  background: var(--primary-navy);
+  color: #ffffff;
+  border-color: var(--primary-navy);
+}
+
+/* Tarjeta especial de derivación humana */
+.human-transfer-card {
+  background: #eef7f0;
+  border: 1.5px solid #a3d9b1;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.human-transfer-card h5 {
+  color: #1b6330;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.human-transfer-card p {
+  font-size: 0.82rem;
+  color: #3b5a42;
+  margin-bottom: 12px;
+}
+
+/* Input y Footer del Chat */
+.chatbot-footer {
+  padding: 12px 16px;
+  background: #ffffff;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.chatbot-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chatbot-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  border: 1.5px solid #dfe3e8;
+  border-radius: var(--radius-full);
+  outline: none;
+  transition: var(--transition);
+}
+
+.chatbot-input:focus {
+  border-color: var(--primary-navy);
+}
+
+.chatbot-send-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-navy);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.chatbot-send-btn:hover {
+  background: var(--accent-gold);
+}
+
+/* ==========================================================================
+   PANEL DE ADMINISTRACIÓN (CARGA DE BANNERS Y VIDEOS)
+   ========================================================================== */
+.admin-trigger-fab {
+  position: fixed;
+  bottom: 26px;
+  left: 26px;
+  z-index: 990;
+  background: var(--primary-navy-dark);
+  color: var(--accent-gold);
+  border: 1.5px solid var(--accent-gold);
+  border-radius: var(--radius-full);
+  padding: 10px 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: var(--shadow-medium);
+  transition: var(--transition);
+}
+
+.admin-trigger-fab:hover {
+  background: var(--accent-gold);
+  color: var(--primary-navy-dark);
+  transform: translateY(-2px);
+}
+
+/* Modal del Panel */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 23, 41, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 820px;
+  max-height: 90vh;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-heavy);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  background: var(--primary-navy);
+  color: #fff;
+  padding: 20px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h3 {
+  color: #fff;
+  font-size: 1.35rem;
+}
+
+.modal-tabs {
+  display: flex;
+  background: var(--bg-sand);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.modal-tab {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
+}
+
+.modal-tab.active {
+  background: #ffffff;
+  color: var(--primary-navy);
+  border-bottom-color: var(--accent-gold);
+}
+
+.modal-body {
+  padding: 26px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.upload-dropzone {
+  border: 2px dashed var(--accent-gold);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  text-align: center;
+  background: #faf7ef;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: var(--transition);
+}
+
+.upload-dropzone:hover {
+  background: #f4edd9;
+}
+
+.upload-dropzone i {
+  font-size: 2.4rem;
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+}
+
+.items-management-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.manage-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--bg-cream);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.manage-item-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.manage-item-thumb {
+  width: 60px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+  background: #ccc;
+}
+
+.manage-item-text h5 {
+  font-size: 0.92rem;
+  color: var(--primary-navy);
+}
+
+.manage-item-text span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE FIRST AUDIT)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .areas-grid,
+  .videos-grid,
+  .sedes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .consultation-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 24px;
+    gap: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-120%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+  }
+  
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-cta {
+    display: none;
+  }
+  
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pillar-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 16px;
+  }
+  
+  .areas-grid,
+  .videos-grid,
+  .sedes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .slide-title {
+    font-size: 2.1rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chatbot-window {
+    width: calc(100vw - 32px);
+    right: 16px;
+    bottom: 90px;
+    height: 75vh;
+  }
+  
+  .admin-trigger-fab {
+    left: 16px;
+    bottom: 20px;
+    padding: 8px 14px;
+    font-size: 0.75rem;
+  }
+  
+  .chatbot-widget {
+    right: 16px;
+    bottom: 20px;
+  }
+}
+
+  </style>
 </head>
 <body>
 
@@ -30,7 +1829,7 @@
   <header class="topbar">
     <div class="container">
       <div class="topbar-left">
-        <span class="topbar-item"><i class="fa-solid fa-location-dot"></i> Sedes: CABA • Tucumán • Santiago del Estero</span>
+        <span class="topbar-item"><i class="fa-solid fa-location-dot"></i> Sedes: CABA â€¢ TucumÃ¡n â€¢ Santiago del Estero</span>
         <span class="topbar-item"><i class="fa-solid fa-clock"></i> Guardia y Urgencias 24/7 en toda Argentina</span>
       </div>
       <div class="topbar-right">
@@ -59,12 +1858,12 @@
         </div>
         <div class="brand-text">
           <h1>VALOR Y ASOC.</h1>
-          <span>Asesoramiento y Representación Legal</span>
+          <span>Asesoramiento y RepresentaciÃ³n Legal</span>
         </div>
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#areas" class="nav-link">Áreas de Práctica</a></li>
+        <li><a href="#areas" class="nav-link">Ãreas de PrÃ¡ctica</a></li>
         <li><a href="#videos" class="nav-link">Videos Explicativos</a></li>
         <li><a href="#contacto" class="nav-link">Consultar Caso</a></li>
         <li><a href="#sedes" class="nav-link">Nuestras Sedes</a></li>
@@ -72,20 +1871,20 @@
 
       <div class="nav-cta">
         <a href="#contacto" class="btn btn-gold">
-          <i class="fa-solid fa-file-pen"></i> Consultá tu Caso
+          <i class="fa-solid fa-file-pen"></i> ConsultÃ¡ tu Caso
         </a>
       </div>
 
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menÃº">
         <i class="fa-solid fa-bars"></i>
       </button>
     </div>
   </nav>
 
-  <!-- HERO SLIDER DINÁMICO (BANNERS Y VIDEOS) -->
+  <!-- HERO SLIDER DINÃMICO (BANNERS Y VIDEOS) -->
   <section class="hero-slider-section">
     <div class="slider-container" id="heroSliderContainer">
-      <!-- Se inyectan dinámicamente desde MediaManager -->
+      <!-- Se inyectan dinÃ¡micamente desde MediaManager -->
     </div>
 
     <!-- Controles -->
@@ -107,8 +1906,8 @@
             <i class="fa-solid fa-user-shield"></i>
           </div>
           <div class="pillar-text">
-            <h4>Atención Personalizada</h4>
-            <p>Estrategias jurídicas a la medida exacta de tu caso y tu familia.</p>
+            <h4>AtenciÃ³n Personalizada</h4>
+            <p>Estrategias jurÃ­dicas a la medida exacta de tu caso y tu familia.</p>
           </div>
         </div>
         <div class="pillar-item">
@@ -126,31 +1925,31 @@
           </div>
           <div class="pillar-text">
             <h4>Experiencia Comprobada</h4>
-            <p>Años de trayectoria defendiendo derechos en tribunales de todo el país.</p>
+            <p>AÃ±os de trayectoria defendiendo derechos en tribunales de todo el paÃ­s.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ÁREAS DE PRÁCTICA (LAS 3 TEMÁTICAS DEL FLYER) -->
+  <!-- ÃREAS DE PRÃCTICA (LAS 3 TEMÃTICAS DEL FLYER) -->
   <section class="areas-section" id="areas">
     <div class="container">
       <div style="text-align: center;">
         <span class="section-tag">Especialidades del Estudio</span>
-        <h2 class="section-title">Nuestras Principales Áreas de Práctica</h2>
-        <p class="section-subtitle">Brindamos soluciones concretas y asesoramiento integral con intervención inmediata ante juzgados y tribunales de la República Argentina.</p>
+        <h2 class="section-title">Nuestras Principales Ãreas de PrÃ¡ctica</h2>
+        <p class="section-subtitle">Brindamos soluciones concretas y asesoramiento integral con intervenciÃ³n inmediata ante juzgados y tribunales de la RepÃºblica Argentina.</p>
       </div>
 
       <div class="areas-grid">
-        <!-- 1. ÁREA PENAL -->
+        <!-- 1. ÃREA PENAL -->
         <article class="area-card penal">
           <div class="area-header penal">
             <div class="area-badge-icon">
               <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <h3>ÁREA PENAL</h3>
-            <p class="area-question">¿Te denunciaron o fuiste víctima de un delito?</p>
+            <h3>ÃREA PENAL</h3>
+            <p class="area-question">Â¿Te denunciaron o fuiste vÃ­ctima de un delito?</p>
           </div>
           <div class="area-body">
             <ul class="services-list">
@@ -158,14 +1957,14 @@
               <li><i class="fa-solid fa-circle-check"></i> <span>Amenazas y lesiones</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Robos y hurtos</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Estafas y defraudaciones</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span>Delitos informáticos y estafas virtuales</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span>Violencia de género</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Delitos informÃ¡ticos y estafas virtuales</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Violencia de gÃ©nero</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Delitos contra la integridad sexual</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span>Querellas - Denunciante / Víctima</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Querellas - Denunciante / VÃ­ctima</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Defensa del imputado las 24 hs</span></li>
             </ul>
             <div class="area-footer">
-              <span class="area-slogan">"Consultá antes de tomar cualquier decisión."</span>
+              <span class="area-slogan">"ConsultÃ¡ antes de tomar cualquier decisiÃ³n."</span>
               <a href="#contacto" class="btn btn-primary btn-area">
                 <i class="fa-solid fa-gavel"></i> Consultar Urgencia Penal
               </a>
@@ -173,29 +1972,29 @@
           </div>
         </article>
 
-        <!-- 2. ÁREA CIVIL -->
+        <!-- 2. ÃREA CIVIL -->
         <article class="area-card civil">
           <div class="area-header civil">
             <div class="area-badge-icon">
               <i class="fa-solid fa-file-signature"></i>
             </div>
-            <h3>ÁREA CIVIL</h3>
-            <p class="area-question">¿Tenés alguno de estos problemas?</p>
+            <h3>ÃREA CIVIL</h3>
+            <p class="area-question">Â¿TenÃ©s alguno de estos problemas?</p>
           </div>
           <div class="area-body">
             <div class="civil-highlight-box">
               <ul>
-                <li><i class="fa-solid fa-question"></i> <span>¿Tuviste un accidente? Reclamá tu indemnización.</span></li>
-                <li><i class="fa-solid fa-question"></i> <span>¿Falleció un familiar y hay que hacer la sucesión?</span></li>
-                <li><i class="fa-solid fa-question"></i> <span>¿Te deben dinero y no sabés cómo cobrarlo?</span></li>
-                <li><i class="fa-solid fa-question"></i> <span>¿Firmaste un contrato y la otra parte no cumplió?</span></li>
+                <li><i class="fa-solid fa-question"></i> <span>Â¿Tuviste un accidente? ReclamÃ¡ tu indemnizaciÃ³n.</span></li>
+                <li><i class="fa-solid fa-question"></i> <span>Â¿FalleciÃ³ un familiar y hay que hacer la sucesiÃ³n?</span></li>
+                <li><i class="fa-solid fa-question"></i> <span>Â¿Te deben dinero y no sabÃ©s cÃ³mo cobrarlo?</span></li>
+                <li><i class="fa-solid fa-question"></i> <span>Â¿Firmaste un contrato y la otra parte no cumpliÃ³?</span></li>
               </ul>
             </div>
             <ul class="services-list">
               <li><i class="fa-solid fa-circle-check"></i> <span>Accidentes e indemnizaciones</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span>Daños y perjuicios integrales</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>DaÃ±os y perjuicios integrales</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Sucesiones y herencias (aceleradas)</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span>Desalojos y restitución de bienes</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Desalojos y restituciÃ³n de bienes</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Incumplimiento de contratos comerciales</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Deudas y cobro de pesos ejecutivos</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Reclamos a empresas y defensa del consumidor</span></li>
@@ -217,20 +2016,20 @@
               <i class="fa-solid fa-users"></i>
             </div>
             <h3>JUBILADOS Y PENSIONADOS</h3>
-            <p class="area-question">¿Te descuentan dinero de tu jubilación y no sabés por qué?</p>
+            <p class="area-question">Â¿Te descuentan dinero de tu jubilaciÃ³n y no sabÃ©s por quÃ©?</p>
           </div>
           <div class="area-body">
             <ul class="services-list">
-              <li><i class="fa-solid fa-circle-check"></i> <span>Revisión minuciosa de préstamos y débitos</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>RevisiÃ³n minuciosa de prÃ©stamos y dÃ©bitos</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Reclamos bancarios y a mutuales</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Descuentos no reconocidos o fraudulentos</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Cambio de banco y sucursal de cobro</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span>Asesoramiento y gestión ante ANSES</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Asesoramiento y gestiÃ³n ante ANSES</span></li>
             </ul>
             <div class="area-footer">
               <span class="area-slogan">"Te asesoramos para que cobres lo que te corresponde."</span>
               <a href="#contacto" class="btn btn-gold btn-area">
-                <i class="fa-solid fa-hand-holding-dollar"></i> Recuperá tu Haber
+                <i class="fa-solid fa-hand-holding-dollar"></i> RecuperÃ¡ tu Haber
               </a>
             </div>
           </div>
@@ -244,29 +2043,29 @@
     <div class="container">
       <i class="fa-brands fa-whatsapp" style="font-size: 3.5rem; color: #25d366; margin-bottom: 16px;"></i>
       <h2 style="font-size: 2.2rem; color: #fff; margin-bottom: 12px; font-family: var(--font-heading);">
-        CONSULTÁ TU CASO EN LÍNEA
+        CONSULTÃ TU CASO EN LÃNEA
       </h2>
       <p style="font-size: 1.1rem; max-width: 650px; margin: 0 auto 30px auto; color: rgba(255,255,255,0.9);">
-        Elegí tu provincia, contanos brevemente lo sucedido y recibí la respuesta inmediata de nuestros abogados u operadores.
+        ElegÃ­ tu provincia, contanos brevemente lo sucedido y recibÃ­ la respuesta inmediata de nuestros abogados u operadores.
       </p>
       <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
         <a href="https://wa.me/5491134614115?text=Hola%2C%20quisiera%20consultar%20mi%20caso%20con%20Valor%20y%20Asociados" target="_blank" class="btn btn-whatsapp" style="font-size: 1.05rem; padding: 14px 30px;">
           <i class="fa-brands fa-whatsapp"></i> WhatsApp CABA (11 3461-4115)
         </a>
         <a href="https://wa.me/5493815736202?text=Hola%2C%20quisiera%20consultar%20mi%20caso%20con%20Valor%20y%20Asociados" target="_blank" class="btn btn-whatsapp" style="font-size: 1.05rem; padding: 14px 30px;">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp Tucumán / NOA (381 573-6202)
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp TucumÃ¡n / NOA (381 573-6202)
         </a>
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓN DE VIDEOS EXPLICATIVOS -->
+  <!-- SECCIÃ“N DE VIDEOS EXPLICATIVOS -->
   <section class="videos-section" id="videos">
     <div class="container">
       <div class="videos-header-row">
         <div>
-          <span class="section-tag">Educación Legal y Consejos Prácticos</span>
-          <h2 class="section-title" style="text-align: left; margin-bottom: 0;">Videos y Guías para Clientes</h2>
+          <span class="section-tag">EducaciÃ³n Legal y Consejos PrÃ¡cticos</span>
+          <h2 class="section-title" style="text-align: left; margin-bottom: 0;">Videos y GuÃ­as para Clientes</h2>
         </div>
         <button class="btn btn-outline" onclick="window.mediaManagerInstance.openModal()" style="font-size: 0.85rem;">
           <i class="fa-solid fa-cloud-arrow-up"></i> Cargar nuevo Video o Banner
@@ -274,7 +2073,7 @@
       </div>
 
       <div class="videos-grid" id="videosGrid">
-        <!-- Renderizado dinámico desde MediaManager -->
+        <!-- Renderizado dinÃ¡mico desde MediaManager -->
       </div>
     </div>
   </section>
@@ -284,10 +2083,10 @@
     <div class="container">
       <div class="consultation-grid">
         <div class="consultation-info">
-          <span class="section-tag" style="color: var(--accent-gold-light);">Innovación Legal en Argentina</span>
-          <h2>Elegí tu Provincia y Cargá tu Consulta</h2>
+          <span class="section-tag" style="color: var(--accent-gold-light);">InnovaciÃ³n Legal en Argentina</span>
+          <h2>ElegÃ­ tu Provincia y CargÃ¡ tu Consulta</h2>
           <p>
-            No importa en qué rincón del país te encuentres: contamos con abogados matriculados y articulación judicial en las 24 provincias argentinas para responderte con inmediatez.
+            No importa en quÃ© rincÃ³n del paÃ­s te encuentres: contamos con abogados matriculados y articulaciÃ³n judicial en las 24 provincias argentinas para responderte con inmediatez.
           </p>
 
           <ul class="benefits-list">
@@ -295,21 +2094,21 @@
               <div class="benefit-icon"><i class="fa-solid fa-bolt"></i></div>
               <div class="benefit-text">
                 <strong>Respuesta en menos de 15 minutos</strong>
-                <span>Prioridad automática si se trata de allanamientos o detenciones.</span>
+                <span>Prioridad automÃ¡tica si se trata de allanamientos o detenciones.</span>
               </div>
             </li>
             <li class="benefit-item">
               <div class="benefit-icon"><i class="fa-solid fa-robot"></i></div>
               <div class="benefit-text">
                 <strong>Asistente inteligente 24/7</strong>
-                <span>Respuestas básicas al instante y derivación inmediata a operadores humanos.</span>
+                <span>Respuestas bÃ¡sicas al instante y derivaciÃ³n inmediata a operadores humanos.</span>
               </div>
             </li>
             <li class="benefit-item">
               <div class="benefit-icon"><i class="fa-solid fa-shield-cat"></i></div>
               <div class="benefit-text">
-                <strong>Análisis de Viabilidad Gratuito</strong>
-                <span>Evaluamos la documentación preliminar de tu reclamo sin costo inicial.</span>
+                <strong>AnÃ¡lisis de Viabilidad Gratuito</strong>
+                <span>Evaluamos la documentaciÃ³n preliminar de tu reclamo sin costo inicial.</span>
               </div>
             </li>
           </ul>
@@ -318,16 +2117,16 @@
         <!-- Card del Formulario -->
         <div class="consultation-card">
           <h3>Formulario de Contacto Directo</h3>
-          <p>Completá los datos y serás derivado con el especialista asignado a tu provincia.</p>
+          <p>CompletÃ¡ los datos y serÃ¡s derivado con el especialista asignado a tu provincia.</p>
 
           <form id="formConsultaPrincipal">
             <div class="form-row">
               <div class="form-group">
                 <label for="consultaNombre">Tu Nombre Completo *</label>
-                <input type="text" id="consultaNombre" class="form-control" placeholder="Ej. Juan Pérez" required>
+                <input type="text" id="consultaNombre" class="form-control" placeholder="Ej. Juan PÃ©rez" required>
               </div>
               <div class="form-group">
-                <label for="consultaTelefono">Teléfono con WhatsApp *</label>
+                <label for="consultaTelefono">TelÃ©fono con WhatsApp *</label>
                 <input type="tel" id="consultaTelefono" class="form-control" placeholder="Ej. 11 2345-6789" required>
               </div>
             </div>
@@ -336,19 +2135,19 @@
               <div class="form-group">
                 <label for="consultaProvincia">Provincia de Argentina *</label>
                 <select id="consultaProvincia" class="form-control" required>
-                  <option value="">-- Seleccioná tu Provincia --</option>
-                  <!-- Llenado dinámico desde JS con las 24 provincias -->
+                  <option value="">-- SeleccionÃ¡ tu Provincia --</option>
+                  <!-- Llenado dinÃ¡mico desde JS con las 24 provincias -->
                 </select>
                 <span class="form-badge-provincia">
                   <i class="fa-solid fa-map-pin"></i> Cobertura en toda la Argentina
                 </span>
               </div>
               <div class="form-group">
-                <label for="consultaArea">Área de la Consulta *</label>
+                <label for="consultaArea">Ãrea de la Consulta *</label>
                 <select id="consultaArea" class="form-control" required>
-                  <option value="">-- Seleccioná el Área --</option>
-                  <option value="Área Penal">Área Penal (Denuncias / Defensas)</option>
-                  <option value="Área Civil">Área Civil (Accidentes / Sucesiones / Contratos)</option>
+                  <option value="">-- SeleccionÃ¡ el Ãrea --</option>
+                  <option value="Ãrea Penal">Ãrea Penal (Denuncias / Defensas)</option>
+                  <option value="Ãrea Civil">Ãrea Civil (Accidentes / Sucesiones / Contratos)</option>
                   <option value="Jubilados y Pensionados">Jubilados y Pensionados (Descuentos ANSES / Bancos)</option>
                   <option value="Otra Consulta">Otra Consulta Legal</option>
                 </select>
@@ -357,7 +2156,7 @@
 
             <div class="form-group">
               <label for="consultaMensaje">Detalle de tu Caso o Consulta *</label>
-              <textarea id="consultaMensaje" class="form-control" placeholder="Describí brevemente lo sucedido, fechas o si recibiste alguna cédula/notificación..." required></textarea>
+              <textarea id="consultaMensaje" class="form-control" placeholder="DescribÃ­ brevemente lo sucedido, fechas o si recibiste alguna cÃ©dula/notificaciÃ³n..." required></textarea>
             </div>
 
             <button type="submit" class="btn btn-gold form-submit-btn">
@@ -373,8 +2172,8 @@
   <section class="sedes-section" id="sedes">
     <div class="container">
       <div style="text-align: center;">
-        <span class="section-tag">Presencia Física</span>
-        <h2 class="section-title">Nuestras Sedes y Oficinas de Atención</h2>
+        <span class="section-tag">Presencia FÃ­sica</span>
+        <h2 class="section-title">Nuestras Sedes y Oficinas de AtenciÃ³n</h2>
         <p class="section-subtitle">Oficinas preparadas para recibirte con privacidad y profesionalismo.</p>
       </div>
 
@@ -388,20 +2187,20 @@
           <span class="sede-subtitle">Tribunales / Centro Judicial</span>
           <p class="sede-address">
             <strong>Viamonte 1390</strong>, piso 3, dpto. 2<br>
-            Ciudad Autónoma de Buenos Aires
+            Ciudad AutÃ³noma de Buenos Aires
           </p>
         </div>
 
-        <!-- TUCUMÁN -->
+        <!-- TUCUMÃN -->
         <div class="sede-card">
           <div class="sede-icon">
             <i class="fa-solid fa-scale-balanced"></i>
           </div>
-          <h4>TUCUMÁN</h4>
-          <span class="sede-subtitle">San Miguel de Tucumán</span>
+          <h4>TUCUMÃN</h4>
+          <span class="sede-subtitle">San Miguel de TucumÃ¡n</span>
           <p class="sede-address">
-            <strong>Celedonio Gutiérrez 616</strong><br>
-            San Miguel de Tucumán
+            <strong>Celedonio GutiÃ©rrez 616</strong><br>
+            San Miguel de TucumÃ¡n
           </p>
         </div>
 
@@ -413,7 +2212,7 @@
           <h4>SANTIAGO DEL ESTERO</h4>
           <span class="sede-subtitle">Capital</span>
           <p class="sede-address">
-            <strong>Pedro León Gallo 128</strong><br>
+            <strong>Pedro LeÃ³n Gallo 128</strong><br>
             Santiago del Estero
           </p>
         </div>
@@ -421,12 +2220,12 @@
     </div>
   </section>
 
-  <!-- ARRANCÁ TU TELÉFONO DE CONTACTO (RÉPLICA INTERACTIVA DEL FLYER) -->
+  <!-- ARRANCÃ TU TELÃ‰FONO DE CONTACTO (RÃ‰PLICA INTERACTIVA DEL FLYER) -->
   <section class="tear-strip-section">
     <div class="container">
       <div class="tear-header">
-        <h4><i class="fa-solid fa-scissors"></i> ARRANCÁ TU TELÉFONO DE CONTACTO</h4>
-        <p>Hacé clic en cualquier talón para copiar el número de teléfono y contactarnos directo por WhatsApp</p>
+        <h4><i class="fa-solid fa-scissors"></i> ARRANCÃ TU TELÃ‰FONO DE CONTACTO</h4>
+        <p>HacÃ© clic en cualquier talÃ³n para copiar el nÃºmero de telÃ©fono y contactarnos directo por WhatsApp</p>
       </div>
 
       <div class="tear-tabs-container">
@@ -485,22 +2284,22 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h3>ESTUDIO JURÍDICO VALOR Y ASOC.</h3>
+          <h3>ESTUDIO JURÃDICO VALOR Y ASOC.</h3>
           <p>
-            Asesoramiento y representación legal de excelencia en toda la República Argentina. Tu tranquilidad es nuestra prioridad.
+            Asesoramiento y representaciÃ³n legal de excelencia en toda la RepÃºblica Argentina. Tu tranquilidad es nuestra prioridad.
           </p>
           <div class="footer-socials">
             <a href="https://wa.me/5491134614115" target="_blank" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="tel:1134614115" class="social-link" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+            <a href="tel:1134614115" class="social-link" aria-label="TelÃ©fono"><i class="fa-solid fa-phone"></i></a>
             <a href="mailto:consultas@valoryasociados.com.ar" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h4>Áreas Legales</h4>
+          <h4>Ãreas Legales</h4>
           <ul class="footer-links">
-            <li><a href="#areas">Área Penal</a></li>
-            <li><a href="#areas">Área Civil y Comercial</a></li>
+            <li><a href="#areas">Ãrea Penal</a></li>
+            <li><a href="#areas">Ãrea Civil y Comercial</a></li>
             <li><a href="#areas">Jubilados y Pensionados</a></li>
             <li><a href="#areas">Sucesiones y Accidentes</a></li>
             <li><a href="#areas">Defensa del Consumidor</a></li>
@@ -511,14 +2310,14 @@
           <h4>Sedes</h4>
           <ul class="footer-links">
             <li><a href="#sedes">CABA (Tribunales)</a></li>
-            <li><a href="#sedes">Tucumán (Capital)</a></li>
+            <li><a href="#sedes">TucumÃ¡n (Capital)</a></li>
             <li><a href="#sedes">Santiago del Estero</a></li>
             <li><a href="#contacto">Provincias de Argentina</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Teléfonos Oficiales</h4>
+          <h4>TelÃ©fonos Oficiales</h4>
           <ul class="footer-links">
             <li><a href="tel:1134614115">11 3461-4115</a></li>
             <li><a href="tel:1154735455">11 5473-5455</a></li>
@@ -530,16 +2329,16 @@
 
       <div class="footer-bottom">
         <div>
-          © 2026 Estudio Jurídico Valor y Asociados. Todos los derechos reservados.
+          Â© 2026 Estudio JurÃ­dico Valor y Asociados. Todos los derechos reservados.
         </div>
         <div>
-          Atención Personalizada | Confidencialidad | Experiencia
+          AtenciÃ³n Personalizada | Confidencialidad | Experiencia
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- BOTÓN FLOTANTE DEL CHATBOT LEGAL -->
+  <!-- BOTÃ“N FLOTANTE DEL CHATBOT LEGAL -->
   <div class="chatbot-widget" id="chatbotWidget">
     <!-- Ventana de Chat -->
     <div class="chatbot-window" id="chatbotWindow">
@@ -551,7 +2350,7 @@
           </div>
           <div class="chatbot-title">
             <h4>Asistente Valor & Asoc.</h4>
-            <span>En línea • Jurisdicción Argentina</span>
+            <span>En lÃ­nea â€¢ JurisdicciÃ³n Argentina</span>
           </div>
         </div>
         <div class="chatbot-actions">
@@ -562,12 +2361,12 @@
       </div>
 
       <div class="chatbot-messages" id="chatbotMessages">
-        <!-- Mensajes inyectados dinámicamente -->
+        <!-- Mensajes inyectados dinÃ¡micamente -->
       </div>
 
       <div class="chatbot-footer">
         <div class="chatbot-input-row">
-          <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Escribí tu consulta o duda...">
+          <input type="text" id="chatbotInput" class="chatbot-input" placeholder="EscribÃ­ tu consulta o duda...">
           <button id="chatbotSend" class="chatbot-send-btn" aria-label="Enviar">
             <i class="fa-solid fa-paper-plane"></i>
           </button>
@@ -582,16 +2381,16 @@
     </button>
   </div>
 
-  <!-- BOTÓN FLOTANTE PARA EL PANEL DE ADMINISTRACIÓN (CARGA DE BANNERS Y VIDEOS) -->
+  <!-- BOTÃ“N FLOTANTE PARA EL PANEL DE ADMINISTRACIÃ“N (CARGA DE BANNERS Y VIDEOS) -->
   <button class="admin-trigger-fab" id="adminTriggerFab" title="Panel para cargar y gestionar banners y videos">
     <i class="fa-solid fa-gear"></i> Cargar Banners & Videos
   </button>
 
-  <!-- MODAL PANEL DE ADMINISTRACIÓN DE MEDIOS -->
+  <!-- MODAL PANEL DE ADMINISTRACIÃ“N DE MEDIOS -->
   <div class="modal-overlay" id="adminModalOverlay">
     <div class="modal-container">
       <div class="modal-header">
-        <h3><i class="fa-solid fa-sliders"></i> Panel de Carga y Gestión Multimedia</h3>
+        <h3><i class="fa-solid fa-sliders"></i> Panel de Carga y GestiÃ³n Multimedia</h3>
         <button id="adminModalClose" class="chat-btn-icon" style="font-size: 1.4rem;">
           <i class="fa-solid fa-xmark"></i>
         </button>
@@ -611,30 +2410,30 @@
         <div class="tab-content active" id="tabContentBanners">
           <h4 style="margin-bottom: 8px;">Cargar Nuevo Banner al Slider</h4>
           <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
-            El banner se publicará automáticamente en el carrusel principal de la portada.
+            El banner se publicarÃ¡ automÃ¡ticamente en el carrusel principal de la portada.
           </p>
 
           <input type="file" id="bannerFileInput" accept="image/*" style="display: none;">
           <div class="upload-dropzone" id="bannerDropzone">
             <i class="fa-solid fa-cloud-arrow-up"></i>
-            <h4>Arrastrá aquí la imagen del Banner</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted);">o hacé clic para explorar tus archivos (JPG, PNG, WebP)</p>
+            <h4>ArrastrÃ¡ aquÃ­ la imagen del Banner</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">o hacÃ© clic para explorar tus archivos (JPG, PNG, WebP)</p>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label>Título del Banner *</label>
+              <label>TÃ­tulo del Banner *</label>
               <input type="text" id="bannerTitle" class="form-control" placeholder="Ej. Abogados Especialistas en Sucesiones">
             </div>
             <div class="form-group">
-              <label>Etiqueta / Categoría</label>
-              <input type="text" id="bannerTag" class="form-control" placeholder="Ej. ÁREA CIVIL">
+              <label>Etiqueta / CategorÃ­a</label>
+              <input type="text" id="bannerTag" class="form-control" placeholder="Ej. ÃREA CIVIL">
             </div>
           </div>
 
           <div class="form-group">
-            <label>Subtítulo o descripción breve</label>
-            <input type="text" id="bannerSubtitle" class="form-control" placeholder="Ej. Soluciones rápidas y asesoramiento transparente.">
+            <label>SubtÃ­tulo o descripciÃ³n breve</label>
+            <input type="text" id="bannerSubtitle" class="form-control" placeholder="Ej. Soluciones rÃ¡pidas y asesoramiento transparente.">
           </div>
 
           <button id="btnSaveBanner" class="btn btn-gold" style="width: 100%; margin-bottom: 30px;">
@@ -643,7 +2442,7 @@
 
           <h5 style="margin-bottom: 12px; font-size: 1rem;">Banners Actualmente Publicados</h5>
           <div class="items-management-list" id="adminBannersList">
-            <!-- Listado dinámico -->
+            <!-- Listado dinÃ¡mico -->
           </div>
         </div>
 
@@ -651,14 +2450,14 @@
         <div class="tab-content" id="tabContentVideos">
           <h4 style="margin-bottom: 8px;">Cargar Nuevo Video Informativo</h4>
           <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
-            Podés subir un archivo de video MP4 o pegar un enlace de YouTube.
+            PodÃ©s subir un archivo de video MP4 o pegar un enlace de YouTube.
           </p>
 
           <input type="file" id="videoFileInput" accept="video/mp4,video/webm" style="display: none;">
           <div class="upload-dropzone" id="videoDropzone">
             <i class="fa-solid fa-file-video"></i>
-            <h4>Arrastrá un video MP4 aquí</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted);">o hacé clic para subir un video desde tu equipo</p>
+            <h4>ArrastrÃ¡ un video MP4 aquÃ­</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">o hacÃ© clic para subir un video desde tu equipo</p>
           </div>
 
           <div class="form-group">
@@ -668,27 +2467,27 @@
 
           <div class="form-row">
             <div class="form-group">
-              <label>Título del Video *</label>
-              <input type="text" id="videoTitle" class="form-control" placeholder="Ej. Cómo actuar ante una detención penal">
+              <label>TÃ­tulo del Video *</label>
+              <input type="text" id="videoTitle" class="form-control" placeholder="Ej. CÃ³mo actuar ante una detenciÃ³n penal">
             </div>
             <div class="form-group">
-              <label>Categoría</label>
-              <input type="text" id="videoCategory" class="form-control" placeholder="Ej. Área Penal">
+              <label>CategorÃ­a</label>
+              <input type="text" id="videoCategory" class="form-control" placeholder="Ej. Ãrea Penal">
             </div>
           </div>
 
           <div class="form-group">
-            <label>Descripción corta</label>
+            <label>DescripciÃ³n corta</label>
             <textarea id="videoDesc" class="form-control" style="min-height: 60px;" placeholder="Breve resumen de lo que explica el video..."></textarea>
           </div>
 
           <button id="btnSaveVideo" class="btn btn-gold" style="width: 100%; margin-bottom: 30px;">
-            <i class="fa-solid fa-plus"></i> Publicar Video en la Galería
+            <i class="fa-solid fa-plus"></i> Publicar Video en la GalerÃ­a
           </button>
 
           <h5 style="margin-bottom: 12px; font-size: 1rem;">Videos Actualmente Publicados</h5>
           <div class="items-management-list" id="adminVideosList">
-            <!-- Listado dinámico -->
+            <!-- Listado dinÃ¡mico -->
           </div>
         </div>
       </div>
@@ -696,9 +2495,1275 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/data.js"></script>
-  <script src="assets/js/chatbot.js"></script>
-  <script src="assets/js/media-manager.js"></script>
-  <script src="assets/js/main.js"></script>
+  
+    <script>
+/**
+ * Estudio Jurídico Valor y Asociados
+ * Datos iniciales: Provincias argentinas, Banners precargados, Videos y Base de Conocimiento del Bot
+ */
+
+const ARGENTINA_PROVINCIAS = [
+  "Ciudad Autónoma de Buenos Aires (CABA)",
+  "Buenos Aires",
+  "Catamarca",
+  "Chaco",
+  "Chubut",
+  "Córdoba",
+  "Corrientes",
+  "Entre Ríos",
+  "Formosa",
+  "Jujuy",
+  "La Pampa",
+  "La Rioja",
+  "Mendoza",
+  "Misiones",
+  "Neuquén",
+  "Río Negro",
+  "Salta",
+  "San Juan",
+  "San Luis",
+  "Santa Cruz",
+  "Santa Fe",
+  "Santiago del Estero",
+  "Tierra del Fuego",
+  "Tucumán"
+];
+
+const DEFAULT_BANNERS = [
+  {
+    id: "banner-1",
+    title: "Defensa Penal Estratégica las 24 Hs",
+    subtitle: "Atención inmediata en comisarías, juzgados y fiscalías de todo el país.",
+    tag: "ÁREA PENAL",
+    imageUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80",
+    buttonText: "Consultar Urgencia",
+    linkTarget: "#contacto"
+  },
+  {
+    id: "banner-2",
+    title: "Reclamos Civiles, Sucesiones y Accidentes",
+    subtitle: "Hacemos valer tus derechos para que obtengas la máxima indemnización.",
+    tag: "ÁREA CIVIL",
+    imageUrl: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1600&q=80",
+    buttonText: "Iniciar Consulta",
+    linkTarget: "#areas"
+  },
+  {
+    id: "banner-3",
+    title: "Protección a Jubilados y Pensionados",
+    subtitle: "Revisión urgente de descuentos indebidos, préstamos fraudulentos y trámites ANSES.",
+    tag: "PREVISIONAL",
+    imageUrl: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=1600&q=80",
+    buttonText: "Recuperá tu haber",
+    linkTarget: "#areas"
+  }
+];
+
+const DEFAULT_VIDEOS = [
+  {
+    id: "video-1",
+    title: "¿Qué hacer ante una denuncia o citación penal en Argentina?",
+    category: "Área Penal",
+    description: "Recomendaciones claves antes de declarar y cómo actuar en las primeras 24 horas.",
+    type: "youtube",
+    url: "https://www.youtube.com/embed/ScMzIvxBSi4",
+    thumbnail: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: "video-2",
+    title: "Sucesiones y Declaratoria de Herederos paso a paso",
+    category: "Área Civil",
+    description: "Tiempos, documentación requerida y acuerdos entre coherederos.",
+    type: "youtube",
+    url: "https://www.youtube.com/embed/ysz5S6PUM-U",
+    thumbnail: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: "video-3",
+    title: "Descuentos no autorizados en recibos de jubilación (ANSES)",
+    category: "Jubilados y Pensionados",
+    description: "Cómo frenar débitos automáticos abusivos y exigir el reintegro con intereses.",
+    type: "youtube",
+    url: "https://www.youtube.com/embed/jNQXAC9IVRw",
+    thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+  }
+];
+
+const CONTACTO_OFICIAL = {
+  telefonos: [
+    { numero: "11 3461-4115", link: "5491134614115", ciudad: "Buenos Aires / CABA" },
+    { numero: "11 5473-5455", link: "5491154735455", ciudad: "Guardia Jurídica" },
+    { numero: "381 573-6202", link: "5493815736202", ciudad: "Tucumán / NOA" }
+  ],
+  sedes: [
+    {
+      provincia: "CABA",
+      direccion: "Viamonte 1390, piso 3, dpto. 2",
+      detalle: "Tribunales / Centro Judicial",
+      icono: "fa-building-columns"
+    },
+    {
+      provincia: "TUCUMÁN",
+      direccion: "Celedonio Gutiérrez 616",
+      detalle: "San Miguel de Tucumán",
+      icono: "fa-scale-balanced"
+    },
+    {
+      provincia: "SANTIAGO DEL ESTERO",
+      direccion: "Pedro León Gallo 128",
+      detalle: "Capital",
+      icono: "fa-landmark"
+    }
+  ]
+};
+
+// Base de preguntas frecuentes y respuestas automatizadas del Bot legal
+const BOT_KNOWLEDGE = {
+  saludo: {
+    mensaje: "¡Hola! Bienvenido a **Valor y Asociados**. Soy el asistente legal virtual del estudio. Para brindarte una respuesta precisa y conectarte con el abogado correspondiente según tu jurisdicción, ¿de qué **provincia de Argentina** te comunicás?",
+    esperaProvincia: true
+  },
+  areas: [
+    {
+      id: "penal",
+      titulo: "⚖️ Área Penal",
+      descripcion: "Defensas, denuncias, allanamientos, estafas virtuales y detenciones.",
+      respuestas: [
+        {
+          clave: "denuncia",
+          titulo: "¿Te denunciaron penalmente?",
+          texto: "Si fuiste denunciado o citado a declarar en fiscalía/comisaría, **tenés derecho constitucional a no declarar sin la presencia de un abogado de confianza**. Nunca declares sin asesoramiento previo. En Valor y Asociados asumimos defensas urgentes en CABA, Tucumán, Santiago del Estero y juzgados federales."
+        },
+        {
+          clave: "victima",
+          titulo: "Fuiste víctima de un delito / Querellas",
+          texto: "Podemos presentarnos como **querellantes particulares** para impulsar la investigación, aportar pruebas periciales, solicitar allanamientos y pedir medidas cautelares o perimetrales de protección."
+        },
+        {
+          clave: "estafa",
+          titulo: "Estafas virtuales y delitos informáticos",
+          texto: "Asesoramos en phishing bancario, hackeos de WhatsApp, transferencias no autorizadas y fraudes cripto. Solicitamos medidas cautelares bancarias inmediatas para congelar fondos."
+        }
+      ]
+    },
+    {
+      id: "civil",
+      titulo: "📄 Área Civil y Comercial",
+      descripcion: "Accidentes, sucesiones, deudas, contratos y reclamos patrimoniales.",
+      respuestas: [
+        {
+          clave: "accidente",
+          titulo: "Accidentes de tránsito e indemnizaciones",
+          texto: "Gestionamos el reclamo integral contra las aseguradoras por daños materiales, lesiones corporales, incapacidad sobreviniente y daño moral. Cobramos a resultado."
+        },
+        {
+          clave: "sucesion",
+          titulo: "Sucesiones y herencias",
+          texto: "Iniciamos la declaratoria de herederos en tiempo récord. Si hay bienes en CABA, Provincia de Buenos Aires, Tucumán o Santiago del Estero, coordinamos la partición e inscripción registral."
+        },
+        {
+          clave: "deudas",
+          titulo: "Cobro de pesos, cheques y contratos incumplidos",
+          texto: "Acciones ejecutivas y ordinarias para recupero crediticio, embargos preventivos e intimaciones prejudiciales vía carta documento."
+        }
+      ]
+    },
+    {
+      id: "jubilados",
+      titulo: "👥 Jubilados y Pensionados",
+      descripcion: "Descuentos en haberes, créditos abusivos, bancos y ANSES.",
+      respuestas: [
+        {
+          clave: "descuentos",
+          titulo: "¿Te descuentan dinero sin autorización?",
+          texto: "Si detectás mutuales, cooperativas o seguros que debitan de tu haber jubilatorio sin tu consentimiento expreso, iniciamos la **medida cautelar de cese inmediato** y el reclamo por reintegro retroactivo más daño punitivo."
+        },
+        {
+          clave: "bancos",
+          titulo: "Reclamos bancarios y cambio de boca de pago",
+          texto: "Te asesoramos para detener débitos de financieras usurarias y tramitar el cambio de sucursal bancaria ante ANSES."
+        }
+      ]
+    }
+  ]
+};
+
+/**
+ * ESTUDIO JURÍDICO VALOR Y ASOCIADOS
+ * Motor del Chatbot Legal Inteligente con Selector de Provincia y Derivación Humana
+ */
+
+class LegalChatbot {
+  constructor() {
+    this.widget = document.getElementById('chatbotWidget');
+    this.window = document.getElementById('chatbotWindow');
+    this.trigger = document.getElementById('chatbotTrigger');
+    this.closeBtn = document.getElementById('chatbotClose');
+    this.messagesContainer = document.getElementById('chatbotMessages');
+    this.input = document.getElementById('chatbotInput');
+    this.sendBtn = document.getElementById('chatbotSend');
+    this.badge = document.getElementById('chatbotBadge');
+
+    // Estado de la conversación
+    this.userState = {
+      provincia: null,
+      nombre: null,
+      areaInteres: null,
+      consultaActual: null,
+      historial: []
+    };
+
+    this.initEvents();
+  }
+
+  initEvents() {
+    // Abrir/cerrar ventana
+    this.trigger.addEventListener('click', () => this.toggleWindow());
+    if (this.closeBtn) {
+      this.closeBtn.addEventListener('click', () => this.closeWindow());
+    }
+
+    // Enviar mensaje con click o Enter
+    this.sendBtn.addEventListener('click', () => this.handleUserSubmit());
+    this.input.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        this.handleUserSubmit();
+      }
+    });
+
+    // Iniciar con bienvenida
+    setTimeout(() => {
+      this.renderWelcome();
+    }, 600);
+  }
+
+  toggleWindow() {
+    const isOpen = this.window.classList.toggle('open');
+    if (isOpen) {
+      if (this.badge) this.badge.style.display = 'none';
+      this.input.focus();
+    }
+  }
+
+  closeWindow() {
+    this.window.classList.remove('open');
+  }
+
+  scrollToBottom() {
+    this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
+  }
+
+  appendMessage(text, sender = 'bot', options = null) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `message ${sender}`;
+    
+    // Convertir markdown básico (**negrita**)
+    const formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    msgDiv.innerHTML = `<div>${formattedText}</div>`;
+
+    if (options && options.length > 0) {
+      const optionsWrap = document.createElement('div');
+      optionsWrap.className = 'message-options';
+      options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'chat-option-btn';
+        btn.innerHTML = `<span>${opt.label}</span> <i class="fa-solid fa-chevron-right"></i>`;
+        btn.addEventListener('click', () => {
+          optionsWrap.remove(); // Evita clicks múltiples repetidos
+          opt.action();
+        });
+        optionsWrap.appendChild(btn);
+      });
+      msgDiv.appendChild(optionsWrap);
+    }
+
+    this.messagesContainer.appendChild(msgDiv);
+    this.scrollToBottom();
+  }
+
+  renderWelcome() {
+    this.appendMessage(
+      "⚖️ ¡Hola! Soy el asistente inteligente de **Valor y Asociados**. Para orientarte y asignarte al especialista en tu jurisdicción, ¿desde qué **provincia de Argentina** nos consultas?",
+      'bot',
+      [
+        {
+          label: "📍 CABA / Buenos Aires",
+          action: () => this.setProvincia("Ciudad Autónoma de Buenos Aires (CABA)")
+        },
+        {
+          label: "📍 Tucumán",
+          action: () => this.setProvincia("Tucumán")
+        },
+        {
+          label: "📍 Santiago del Estero",
+          action: () => this.setProvincia("Santiago del Estero")
+        },
+        {
+          label: "🌎 Elegir otra provincia de Argentina",
+          action: () => this.promptProvinciaSelector()
+        }
+      ]
+    );
+  }
+
+  promptProvinciaSelector() {
+    const selectHtml = document.createElement('div');
+    selectHtml.className = 'message bot';
+    selectHtml.innerHTML = `
+      <p style="margin-bottom: 8px;"><strong>Selecciona tu provincia:</strong></p>
+      <select id="chatProvinciaSelect" class="form-control" style="font-size: 0.85rem; padding: 6px;">
+        <option value="">-- Elige una provincia --</option>
+        ${ARGENTINA_PROVINCIAS.map(p => `<option value="${p}">${p}</option>`).join('')}
+      </select>
+      <button id="btnConfirmProv" class="btn btn-primary" style="margin-top: 8px; width: 100%; padding: 6px; font-size: 0.8rem;">Confirmar Provincia</button>
+    `;
+    this.messagesContainer.appendChild(selectHtml);
+    this.scrollToBottom();
+
+    document.getElementById('btnConfirmProv').addEventListener('click', () => {
+      const select = document.getElementById('chatProvinciaSelect');
+      if (select.value) {
+        selectHtml.remove();
+        this.setProvincia(select.value);
+      }
+    });
+  }
+
+  setProvincia(provincia) {
+    this.userState.provincia = provincia;
+    this.appendMessage(`Estoy en **${provincia}**`, 'user');
+
+    // Sincronizar también con el formulario de la landing
+    const formProvSelect = document.getElementById('consultaProvincia');
+    if (formProvSelect) {
+      formProvSelect.value = provincia;
+    }
+
+    setTimeout(() => {
+      this.appendMessage(
+        `Excelente. Contamos con cobertura y representación legal en **${provincia}**.\n\n¿Sobre qué temática legal es tu consulta principal?`,
+        'bot',
+        [
+          {
+            label: "⚖️ Área Penal (Urgencias, denuncias, defensas)",
+            action: () => this.selectArea("penal")
+          },
+          {
+            label: "📄 Área Civil (Accidentes, herencias, reclamos)",
+            action: () => this.selectArea("civil")
+          },
+          {
+            label: "👥 Jubilados y Pensionados (Descuentos, ANSES)",
+            action: () => this.selectArea("jubilados")
+          },
+          {
+            label: "👨‍⚖️ Hablar directamente con un Abogado",
+            action: () => this.escalateToHuman("Solicitud directa de comunicación con abogado")
+          }
+        ]
+      );
+    }, 400);
+  }
+
+  selectArea(areaKey) {
+    this.userState.areaInteres = areaKey;
+    const area = BOT_KNOWLEDGE.areas.find(a => a.id === areaKey);
+
+    if (area) {
+      this.appendMessage(`Consulta sobre ${area.titulo}`, 'user');
+
+      const opciones = area.respuestas.map(r => ({
+        label: r.titulo,
+        action: () => this.showAnswer(r.texto, r.titulo)
+      }));
+
+      // Agregar opción de derivar a humano siempre
+      opciones.push({
+        label: "💬 Mi caso es específico (Hablar con un operador)",
+        action: () => this.escalateToHuman(`Consulta personalizada en ${area.titulo}`)
+      });
+
+      setTimeout(() => {
+        this.appendMessage(
+          `**${area.titulo}**\n${area.descripcion}\n\nSeleccioná el tema más cercano a tu situación o escribinos tu duda en el campo de texto inferior:`,
+          'bot',
+          opciones
+        );
+      }, 400);
+    }
+  }
+
+  showAnswer(textoRespuesta, tema) {
+    this.appendMessage(tema, 'user');
+    setTimeout(() => {
+      this.appendMessage(textoRespuesta, 'bot', [
+        {
+          label: "✅ ¿Deseas iniciar una acción legal con nosotros?",
+          action: () => this.escalateToHuman(`Interés en accionar por: ${tema}`)
+        },
+        {
+          label: "🔄 Consultar otro tema",
+          action: () => this.renderMenuAreas()
+        }
+      ]);
+    }, 400);
+  }
+
+  renderMenuAreas() {
+    this.appendMessage(
+      "¿Sobre qué otra área necesitas asesoramiento?",
+      'bot',
+      [
+        {
+          label: "⚖️ Área Penal",
+          action: () => this.selectArea("penal")
+        },
+        {
+          label: "📄 Área Civil",
+          action: () => this.selectArea("civil")
+        },
+        {
+          label: "👥 Jubilados y Pensionados",
+          action: () => this.selectArea("jubilados")
+        },
+        {
+          label: "📞 Hablar con un Abogado de Guardia",
+          action: () => this.escalateToHuman("Consulta libre general")
+        }
+      ]
+    );
+  }
+
+  handleUserSubmit() {
+    const text = this.input.value.trim();
+    if (!text) return;
+
+    this.input.value = '';
+    this.appendMessage(text, 'user');
+    this.processNLP(text);
+  }
+
+  processNLP(query) {
+    const q = query.toLowerCase();
+
+    // 1. Si aún no fijó provincia y escribe una provincia
+    if (!this.userState.provincia) {
+      const matchProv = ARGENTINA_PROVINCIAS.find(p => q.includes(p.toLowerCase()));
+      if (matchProv) {
+        this.setProvincia(matchProv);
+        return;
+      }
+    }
+
+    // 2. Detección de intención humana explícita
+    if (q.includes("humano") || q.includes("abogado") || q.includes("hablar") || q.includes("persona") || q.includes("telefono") || q.includes("whatsapp") || q.includes("llamar") || q.includes("urgente")) {
+      setTimeout(() => {
+        this.escalateToHuman(query);
+      }, 500);
+      return;
+    }
+
+    // 3. Búsqueda de coincidencia en base de conocimiento
+    let found = false;
+
+    // Penal
+    if (q.includes("denuncia") || q.includes("preso") || q.includes("fiscalia") || q.includes("comisaria") || q.includes("estafa") || q.includes("delito") || q.includes("robo") || q.includes("violencia") || q.includes("allanamiento")) {
+      found = true;
+      const resp = BOT_KNOWLEDGE.areas.find(a => a.id === "penal").respuestas[0];
+      setTimeout(() => {
+        this.appendMessage(
+          `Comprendo tu situación en materia penal. En estos casos, **actuar con celeridad es crítico**. \n\n${resp.texto}`,
+          'bot',
+          [
+            {
+              label: "🚨 Contactar Urgencia Penal ahora",
+              action: () => this.escalateToHuman(`Urgencia penal: "${query}"`)
+            },
+            {
+              label: "Ver más servicios penales",
+              action: () => this.selectArea("penal")
+            }
+          ]
+        );
+      }, 500);
+      return;
+    }
+
+    // Civil / Sucesión / Accidente
+    if (q.includes("accidente") || q.includes("choque") || q.includes("sucesion") || q.includes("herencia") || q.includes("indemnizacion") || q.includes("desalojo") || q.includes("contrato") || q.includes("alquiler") || q.includes("deuda")) {
+      found = true;
+      const areaCivil = BOT_KNOWLEDGE.areas.find(a => a.id === "civil");
+      setTimeout(() => {
+        this.appendMessage(
+          `En el área civil y comercial realizamos reclamos patrimoniales con seguimiento riguroso. \n\nPodemos analizar tu documentación preliminar sin costo para evaluar la viabilidad del reclamo.`,
+          'bot',
+          [
+            {
+              label: "📋 Derivar caso a operador civil",
+              action: () => this.escalateToHuman(`Consulta Civil: "${query}"`)
+            },
+            {
+              label: "Ver opciones del Área Civil",
+              action: () => this.selectArea("civil")
+            }
+          ]
+        );
+      }, 500);
+      return;
+    }
+
+    // Previsional / Jubilados
+    if (q.includes("jubilad") || q.includes("pension") || q.includes("anses") || q.includes("descuento") || q.includes("recibo") || q.includes("debito") || q.includes("banco")) {
+      found = true;
+      setTimeout(() => {
+        this.appendMessage(
+          `Procesamos casos de jubilados y pensionados contra bancos y mutuales que debitan conceptos indebidos de los haberes. El recupero suele incluir indemnizaciones por daño patrimonial y moral.`,
+          'bot',
+          [
+            {
+              label: "Solicitar auditoría de recibo de haberes",
+              action: () => this.escalateToHuman(`Jubilados / ANSES: "${query}"`)
+            }
+          ]
+        );
+      }, 500);
+      return;
+    }
+
+    // 4. Si el bot NO puede resolver la cuestión: DERIVACIÓN A OPERADORES HUMANOS
+    if (!found) {
+      setTimeout(() => {
+        this.appendMessage(
+          `Entiendo tu consulta: *"${query}"*.\n\nDado que cada caso judicial tiene particularidades probatorias y procesales únicas en Argentina, **te derivaré con un abogado operador de nuestro equipo** para que examine tu situación en detalle.`,
+          'bot'
+        );
+        setTimeout(() => {
+          this.escalateToHuman(query);
+        }, 600);
+      }, 500);
+    }
+  }
+
+  escalateToHuman(motivoConsulta = "") {
+    const prov = this.userState.provincia || "Argentina (a determinar)";
+    
+    // Seleccionar el teléfono idóneo según la provincia
+    let telefonoTarget = CONTACTO_OFICIAL.telefonos[0]; // CABA por defecto
+    if (prov.toLowerCase().includes("tucumán") || prov.toLowerCase().includes("santiago") || prov.toLowerCase().includes("salta") || prov.toLowerCase().includes("jujuy")) {
+      telefonoTarget = CONTACTO_OFICIAL.telefonos[2]; // NOA
+    }
+
+    const mensajeWhatsApp = encodeURIComponent(
+      `Hola Estudio Jurídico Valor y Asociados. Me comunico desde ${prov}. Mi consulta es: "${motivoConsulta}". Quisiera asesoramiento con un abogado del equipo.`
+    );
+
+    const waUrl = `https://wa.me/${telefonoTarget.link}?text=${mensajeWhatsApp}`;
+
+    const cardHtml = document.createElement('div');
+    cardHtml.className = 'message bot';
+    cardHtml.innerHTML = `
+      <div class="human-transfer-card">
+        <i class="fa-solid fa-headset" style="font-size: 2rem; color: #1b6330; margin-bottom: 8px;"></i>
+        <h5>Derivación a Abogado Humano</h5>
+        <p>Jurisdicción asignada: <strong>${prov}</strong><br>Guardia activa las 24 hs.</p>
+        <a href="${waUrl}" target="_blank" class="btn btn-whatsapp" style="width: 100%; margin-bottom: 8px; font-size: 0.88rem;">
+          <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp (${telefonoTarget.numero})
+        </a>
+        <a href="tel:${telefonoTarget.numero.replace(/\s+/g, '')}" class="btn btn-outline" style="width: 100%; font-size: 0.8rem; padding: 6px;">
+          <i class="fa-solid fa-phone"></i> Llamar Directo
+        </a>
+      </div>
+    `;
+
+    this.messagesContainer.appendChild(cardHtml);
+    this.scrollToBottom();
+
+    // Guardar lead de consulta en el storage para el administrador
+    this.saveLeadToLocal({
+      fecha: new Date().toISOString(),
+      provincia: prov,
+      consulta: motivoConsulta,
+      derivadoA: telefonoTarget.numero
+    });
+  }
+
+  saveLeadToLocal(lead) {
+    try {
+      const leads = JSON.parse(localStorage.getItem('valor_consultas_leads') || '[]');
+      leads.unshift(lead);
+      localStorage.setItem('valor_consultas_leads', JSON.stringify(leads));
+    } catch (e) {
+      console.warn("Storage no disponible", e);
+    }
+  }
+}
+
+/**
+ * ESTUDIO JURÍDICO VALOR Y ASOCIADOS
+ * Gestor dinámico de Banners y Videos con persistencia y Panel de Carga
+ */
+
+class MediaManager {
+  constructor() {
+    this.storageKeyBanners = 'valor_asociados_banners';
+    this.storageKeyVideos = 'valor_asociados_videos';
+
+    this.banners = this.loadBanners();
+    this.videos = this.loadVideos();
+
+    this.currentSlideIndex = 0;
+    this.sliderTimer = null;
+
+    this.initElements();
+    this.initEvents();
+    this.renderSlider();
+    this.renderVideos();
+    this.renderAdminLists();
+  }
+
+  initElements() {
+    // Slider Hero
+    this.sliderContainer = document.getElementById('heroSliderContainer');
+    this.dotsContainer = document.getElementById('sliderDots');
+    this.prevBtn = document.getElementById('sliderPrev');
+    this.nextBtn = document.getElementById('sliderNext');
+
+    // Videos
+    this.videosGrid = document.getElementById('videosGrid');
+
+    // Modal Admin
+    this.adminFab = document.getElementById('adminTriggerFab');
+    this.modalOverlay = document.getElementById('adminModalOverlay');
+    this.modalClose = document.getElementById('adminModalClose');
+    this.tabBanners = document.getElementById('tabBtnBanners');
+    this.tabVideos = document.getElementById('tabBtnVideos');
+    this.contentBanners = document.getElementById('tabContentBanners');
+    this.contentVideos = document.getElementById('tabContentVideos');
+
+    // Formularios Admin
+    this.bannerFileInput = document.getElementById('bannerFileInput');
+    this.bannerDropzone = document.getElementById('bannerDropzone');
+    this.bannerTitleInput = document.getElementById('bannerTitle');
+    this.bannerSubtitleInput = document.getElementById('bannerSubtitle');
+    this.bannerTagInput = document.getElementById('bannerTag');
+    this.btnSaveBanner = document.getElementById('btnSaveBanner');
+    this.adminBannersList = document.getElementById('adminBannersList');
+
+    this.videoFileInput = document.getElementById('videoFileInput');
+    this.videoDropzone = document.getElementById('videoDropzone');
+    this.videoUrlInput = document.getElementById('videoUrl');
+    this.videoTitleInput = document.getElementById('videoTitle');
+    this.videoCategoryInput = document.getElementById('videoCategory');
+    this.videoDescInput = document.getElementById('videoDesc');
+    this.btnSaveVideo = document.getElementById('btnSaveVideo');
+    this.adminVideosList = document.getElementById('adminVideosList');
+
+    // Cache para subida de archivo temporal en base64
+    this.tempBannerImageBase64 = null;
+    this.tempVideoBase64 = null;
+  }
+
+  initEvents() {
+    // Controles de Slider
+    if (this.prevBtn) this.prevBtn.addEventListener('click', () => this.prevSlide());
+    if (this.nextBtn) this.nextBtn.addEventListener('click', () => this.nextSlide());
+
+    // Modal Admin
+    if (this.adminFab) {
+      this.adminFab.addEventListener('click', () => this.openModal());
+    }
+    if (this.modalClose) {
+      this.modalClose.addEventListener('click', () => this.closeModal());
+    }
+    if (this.modalOverlay) {
+      this.modalOverlay.addEventListener('click', (e) => {
+        if (e.target === this.modalOverlay) this.closeModal();
+      });
+    }
+
+    // Tabs del Modal
+    if (this.tabBanners && this.tabVideos) {
+      this.tabBanners.addEventListener('click', () => {
+        this.tabBanners.classList.add('active');
+        this.tabVideos.classList.remove('active');
+        this.contentBanners.classList.add('active');
+        this.contentVideos.classList.remove('active');
+      });
+      this.tabVideos.addEventListener('click', () => {
+        this.tabVideos.classList.add('active');
+        this.tabBanners.classList.remove('active');
+        this.contentVideos.classList.add('active');
+        this.contentBanners.classList.remove('active');
+      });
+    }
+
+    // Subida de Banners
+    if (this.bannerDropzone) {
+      this.bannerDropzone.addEventListener('click', () => this.bannerFileInput.click());
+    }
+    if (this.bannerFileInput) {
+      this.bannerFileInput.addEventListener('change', (e) => this.handleBannerFile(e));
+    }
+    if (this.btnSaveBanner) {
+      this.btnSaveBanner.addEventListener('click', () => this.saveNewBanner());
+    }
+
+    // Subida de Videos
+    if (this.videoDropzone) {
+      this.videoDropzone.addEventListener('click', () => this.videoFileInput.click());
+    }
+    if (this.videoFileInput) {
+      this.videoFileInput.addEventListener('change', (e) => this.handleVideoFile(e));
+    }
+    if (this.btnSaveVideo) {
+      this.btnSaveVideo.addEventListener('click', () => this.saveNewVideo());
+    }
+  }
+
+  // --- CARGA Y PERSISTENCIA (LocalStorage) ---
+  loadBanners() {
+    try {
+      const stored = localStorage.getItem(this.storageKeyBanners);
+      return stored ? JSON.parse(stored) : [...DEFAULT_BANNERS];
+    } catch (e) {
+      return [...DEFAULT_BANNERS];
+    }
+  }
+
+  saveBanners() {
+    try {
+      localStorage.setItem(this.storageKeyBanners, JSON.stringify(this.banners));
+    } catch (e) {
+      console.warn("Storage full or unavailable", e);
+    }
+  }
+
+  loadVideos() {
+    try {
+      const stored = localStorage.getItem(this.storageKeyVideos);
+      return stored ? JSON.parse(stored) : [...DEFAULT_VIDEOS];
+    } catch (e) {
+      return [...DEFAULT_VIDEOS];
+    }
+  }
+
+  saveVideos() {
+    try {
+      localStorage.setItem(this.storageKeyVideos, JSON.stringify(this.videos));
+    } catch (e) {
+      console.warn("Storage full or unavailable", e);
+    }
+  }
+
+  // --- RENDERIZADO DEL HERO SLIDER ---
+  renderSlider() {
+    if (!this.sliderContainer) return;
+    this.sliderContainer.innerHTML = '';
+    this.dotsContainer.innerHTML = '';
+
+    if (this.banners.length === 0) {
+      this.sliderContainer.innerHTML = `
+        <div class="slide active" style="background: var(--primary-navy-dark);">
+          <div class="slide-overlay"></div>
+          <div class="container">
+            <div class="slide-content">
+              <span class="slide-badge">ESTUDIO JURÍDICO</span>
+              <h2 class="slide-title">VALOR Y ASOCIADOS</h2>
+              <p class="slide-subtitle">Tu tranquilidad, nuestra prioridad.</p>
+            </div>
+          </div>
+        </div>
+      `;
+      return;
+    }
+
+    this.banners.forEach((banner, index) => {
+      const slide = document.createElement('div');
+      slide.className = `slide ${index === 0 ? 'active' : ''}`;
+      slide.style.backgroundImage = `url('${banner.imageUrl}')`;
+
+      slide.innerHTML = `
+        <div class="slide-overlay"></div>
+        <div class="container">
+          <div class="slide-content">
+            <span class="slide-badge">${banner.tag || 'VALOR Y ASOCIADOS'}</span>
+            <h2 class="slide-title">${banner.title}</h2>
+            <p class="slide-subtitle">${banner.subtitle}</p>
+            <div class="slide-actions">
+              <a href="${banner.linkTarget || '#contacto'}" class="btn btn-gold">
+                ${banner.buttonText || 'Consultar Caso'} <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <button class="btn btn-outline" onclick="window.chatbotInstance && window.chatbotInstance.toggleWindow()" style="border-color: #fff; color: #fff;">
+                <i class="fa-solid fa-comment-dots"></i> Asistente Virtual
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      this.sliderContainer.appendChild(slide);
+
+      // Crear dot
+      const dot = document.createElement('button');
+      dot.className = `slider-dot ${index === 0 ? 'active' : ''}`;
+      dot.setAttribute('aria-label', `Slide ${index + 1}`);
+      dot.addEventListener('click', () => this.goToSlide(index));
+      this.dotsContainer.appendChild(dot);
+    });
+
+    this.currentSlideIndex = 0;
+    this.startAutoSlider();
+  }
+
+  goToSlide(index) {
+    const slides = this.sliderContainer.querySelectorAll('.slide');
+    const dots = this.dotsContainer.querySelectorAll('.slider-dot');
+
+    if (!slides.length) return;
+
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+
+    this.currentSlideIndex = (index + slides.length) % slides.length;
+    slides[this.currentSlideIndex].classList.add('active');
+    if (dots[this.currentSlideIndex]) {
+      dots[this.currentSlideIndex].classList.add('active');
+    }
+
+    this.startAutoSlider();
+  }
+
+  nextSlide() {
+    this.goToSlide(this.currentSlideIndex + 1);
+  }
+
+  prevSlide() {
+    this.goToSlide(this.currentSlideIndex - 1);
+  }
+
+  startAutoSlider() {
+    clearInterval(this.sliderTimer);
+    this.sliderTimer = setInterval(() => {
+      this.nextSlide();
+    }, 6000);
+  }
+
+  // --- RENDERIZADO DE VIDEOS ---
+  renderVideos() {
+    if (!this.videosGrid) return;
+    this.videosGrid.innerHTML = '';
+
+    if (this.videos.length === 0) {
+      this.videosGrid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-muted);">
+          <i class="fa-solid fa-video-slash" style="font-size: 2.5rem; margin-bottom: 12px; display: block;"></i>
+          No hay videos cargados actualmente. Puedes cargar nuevos desde el Panel de Carga.
+        </div>
+      `;
+      return;
+    }
+
+    this.videos.forEach(video => {
+      const card = document.createElement('div');
+      card.className = 'video-card';
+
+      // Si es YouTube embed o video local
+      const isEmbed = video.url.includes('youtube.com') || video.url.includes('youtu.be') || video.url.includes('embed');
+
+      card.innerHTML = `
+        <div class="video-thumb-wrap">
+          ${isEmbed ? `
+            <iframe src="${video.url}" title="${video.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 100%; border: none;"></iframe>
+          ` : `
+            <video controls poster="${video.thumbnail || ''}" style="width: 100%; height: 100%; object-fit: cover;">
+              <source src="${video.url}" type="video/mp4">
+              Tu navegador no soporta el formato de video.
+            </video>
+          `}
+        </div>
+        <div class="video-info">
+          <span class="video-category">${video.category || 'Asesoramiento Legal'}</span>
+          <h4 class="video-title">${video.title}</h4>
+          <p class="video-desc">${video.description || ''}</p>
+          <a href="#contacto" class="btn btn-outline" style="font-size: 0.8rem; padding: 6px 14px; align-self: flex-start;">
+            <i class="fa-solid fa-scale-balanced"></i> Consultar sobre este tema
+          </a>
+        </div>
+      `;
+
+      this.videosGrid.appendChild(card);
+    });
+  }
+
+  // --- ADMIN PANEL Y CARGA DE BANNERS ---
+  openModal() {
+    this.modalOverlay.classList.add('open');
+  }
+
+  closeModal() {
+    this.modalOverlay.classList.remove('open');
+  }
+
+  handleBannerFile(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (loadEvent) => {
+      this.tempBannerImageBase64 = loadEvent.target.result;
+      this.bannerDropzone.innerHTML = `
+        <img src="${this.tempBannerImageBase64}" style="max-height: 120px; margin: 0 auto 10px auto; border-radius: 6px;" />
+        <p style="font-size: 0.85rem; color: #1a6b33; font-weight: 700;">✓ Imagen seleccionada: ${file.name}</p>
+        <span style="font-size: 0.75rem; color: var(--text-muted);">Clic para cambiar</span>
+      `;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  saveNewBanner() {
+    const title = this.bannerTitleInput.value.trim();
+    const subtitle = this.bannerSubtitleInput.value.trim();
+    const tag = this.bannerTagInput.value.trim() || 'ESTUDIO JURÍDICO';
+
+    if (!title || !this.tempBannerImageBase64) {
+      alert("Por favor completa el título y selecciona una imagen para el banner.");
+      return;
+    }
+
+    const newBanner = {
+      id: `banner-${Date.now()}`,
+      title,
+      subtitle: subtitle || "Atención y representación legal en toda la República Argentina.",
+      tag,
+      imageUrl: this.tempBannerImageBase64,
+      buttonText: "Consultar Caso",
+      linkTarget: "#contacto"
+    };
+
+    this.banners.unshift(newBanner);
+    this.saveBanners();
+    this.renderSlider();
+    this.renderAdminLists();
+
+    // Reset formulario
+    this.bannerTitleInput.value = '';
+    this.bannerSubtitleInput.value = '';
+    this.bannerTagInput.value = '';
+    this.tempBannerImageBase64 = null;
+    this.bannerDropzone.innerHTML = `
+      <i class="fa-solid fa-cloud-arrow-up"></i>
+      <h4>Arrastra aquí la imagen del Banner</h4>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">o haz clic para explorar tus archivos (JPG, PNG, WebP)</p>
+    `;
+
+    alert("¡Banner cargado con éxito y publicado en el slider!");
+  }
+
+  deleteBanner(bannerId) {
+    if (confirm("¿Estás seguro de eliminar este banner?")) {
+      this.banners = this.banners.filter(b => b.id !== bannerId);
+      this.saveBanners();
+      this.renderSlider();
+      this.renderAdminLists();
+    }
+  }
+
+  // --- ADMIN PANEL Y CARGA DE VIDEOS ---
+  handleVideoFile(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (loadEvent) => {
+      this.tempVideoBase64 = loadEvent.target.result;
+      this.videoDropzone.innerHTML = `
+        <i class="fa-solid fa-circle-check" style="color: #25d366; font-size: 2.2rem;"></i>
+        <p style="font-size: 0.88rem; font-weight: 700; color: #1b6330;">Video cargado: ${file.name}</p>
+        <span style="font-size: 0.75rem; color: var(--text-muted);">Clic para reemplazar</span>
+      `;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  saveNewVideo() {
+    const title = this.videoTitleInput.value.trim();
+    const category = this.videoCategoryInput.value.trim() || 'Derecho General';
+    const desc = this.videoDescInput.value.trim();
+    let videoUrl = this.videoUrlInput.value.trim();
+
+    if (!title) {
+      alert("Por favor ingresa al menos un título para el video.");
+      return;
+    }
+
+    if (!videoUrl && !this.tempVideoBase64) {
+      alert("Debes seleccionar un archivo de video local o ingresar un enlace de YouTube.");
+      return;
+    }
+
+    // Convertir links de youtube normales a embed si aplica
+    if (videoUrl.includes('watch?v=')) {
+      videoUrl = videoUrl.replace('watch?v=', 'embed/');
+    } else if (videoUrl.includes('youtu.be/')) {
+      const id = videoUrl.split('youtu.be/')[1].split('?')[0];
+      videoUrl = `https://www.youtube.com/embed/${id}`;
+    }
+
+    const newVideo = {
+      id: `video-${Date.now()}`,
+      title,
+      category,
+      description: desc,
+      type: this.tempVideoBase64 ? 'local' : 'youtube',
+      url: this.tempVideoBase64 || videoUrl,
+      thumbnail: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80'
+    };
+
+    this.videos.unshift(newVideo);
+    this.saveVideos();
+    this.renderVideos();
+    this.renderAdminLists();
+
+    // Reset formulario
+    this.videoTitleInput.value = '';
+    this.videoUrlInput.value = '';
+    this.videoDescInput.value = '';
+    this.tempVideoBase64 = null;
+    this.videoDropzone.innerHTML = `
+      <i class="fa-solid fa-file-video"></i>
+      <h4>Arrastra un video MP4 aquí</h4>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">o haz clic para subir un video de tus archivos</p>
+    `;
+
+    alert("¡Video agregado con éxito a la galería!");
+  }
+
+  deleteVideo(videoId) {
+    if (confirm("¿Estás seguro de eliminar este video?")) {
+      this.videos = this.videos.filter(v => v.id !== videoId);
+      this.saveVideos();
+      this.renderVideos();
+      this.renderAdminLists();
+    }
+  }
+
+  // --- RENDER DE LISTADOS EN EL MODAL ---
+  renderAdminLists() {
+    // Listado Banners
+    if (this.adminBannersList) {
+      this.adminBannersList.innerHTML = '';
+      this.banners.forEach(b => {
+        const item = document.createElement('div');
+        item.className = 'manage-item';
+        item.innerHTML = `
+          <div class="manage-item-info">
+            <img src="${b.imageUrl}" class="manage-item-thumb" alt="${b.title}">
+            <div class="manage-item-text">
+              <h5>${b.title}</h5>
+              <span>Etiqueta: ${b.tag || 'General'}</span>
+            </div>
+          </div>
+          <button class="btn btn-outline" style="color: #e63946; border-color: #e63946; padding: 4px 10px; font-size: 0.8rem;" onclick="window.mediaManagerInstance.deleteBanner('${b.id}')">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        `;
+        this.adminBannersList.appendChild(item);
+      });
+    }
+
+    // Listado Videos
+    if (this.adminVideosList) {
+      this.adminVideosList.innerHTML = '';
+      this.videos.forEach(v => {
+        const item = document.createElement('div');
+        item.className = 'manage-item';
+        item.innerHTML = `
+          <div class="manage-item-info">
+            <div class="manage-item-thumb" style="display: flex; align-items: center; justify-content: center; background: #0f2744; color: #fff;">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="manage-item-text">
+              <h5>${v.title}</h5>
+              <span>${v.category}</span>
+            </div>
+          </div>
+          <button class="btn btn-outline" style="color: #e63946; border-color: #e63946; padding: 4px 10px; font-size: 0.8rem;" onclick="window.mediaManagerInstance.deleteVideo('${v.id}')">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        `;
+        this.adminVideosList.appendChild(item);
+      });
+    }
+  }
+}
+
+/**
+ * ESTUDIO JURÍDICO VALOR Y ASOCIADOS
+ * Script principal: Inicializaciones, Formulario con selector de Provincias y Talones interactivos
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Inicializar Gestor de Medios (Banners & Videos)
+  window.mediaManagerInstance = new MediaManager();
+
+  // 2. Inicializar Chatbot
+  window.chatbotInstance = new LegalChatbot();
+
+  // 3. Poblar el selector de provincias de Argentina en el formulario
+  initProvinciaSelect();
+
+  // 4. Manejar envío del formulario de consulta
+  initConsultationForm();
+
+  // 5. Inicializar talones interactivos del flyer ("Arrancá tu teléfono")
+  initTearTabs();
+
+  // 6. Menú móvil
+  initMobileMenu();
+});
+
+/**
+ * Llena el <select> de provincias con las 24 jurisdicciones de Argentina
+ */
+function initProvinciaSelect() {
+  const select = document.getElementById('consultaProvincia');
+  if (!select) return;
+
+  ARGENTINA_PROVINCIAS.forEach(prov => {
+    const opt = document.createElement('option');
+    opt.value = prov;
+    opt.textContent = prov;
+    select.appendChild(opt);
+  });
+}
+
+/**
+ * Gestión del formulario principal de consulta
+ */
+function initConsultationForm() {
+  const form = document.getElementById('formConsultaPrincipal');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nombre = document.getElementById('consultaNombre').value.trim();
+    const telefono = document.getElementById('consultaTelefono').value.trim();
+    const provincia = document.getElementById('consultaProvincia').value;
+    const area = document.getElementById('consultaArea').value;
+    const mensaje = document.getElementById('consultaMensaje').value.trim();
+
+    if (!nombre || !telefono || !provincia || !area || !mensaje) {
+      alert("Por favor completá todos los campos requeridos para poder evaluar tu caso.");
+      return;
+    }
+
+    // Guardar en leads locales
+    try {
+      const leads = JSON.parse(localStorage.getItem('valor_consultas_leads') || '[]');
+      leads.unshift({
+        fecha: new Date().toLocaleString('es-AR'),
+        nombre,
+        telefono,
+        provincia,
+        area,
+        mensaje
+      });
+      localStorage.setItem('valor_consultas_leads', JSON.stringify(leads));
+    } catch (err) {
+      console.warn("Storage no disponible", err);
+    }
+
+    // Elegir teléfono para whatsapp
+    let tel = "5491134614115";
+    if (provincia.toLowerCase().includes("tucumán") || provincia.toLowerCase().includes("santiago") || provincia.toLowerCase().includes("noa")) {
+      tel = "5493815736202";
+    }
+
+    const textoWhatsApp = encodeURIComponent(
+      `Hola Estudio Jurídico Valor y Asociados.\nMi nombre es: ${nombre}\nTeléfono: ${telefono}\nProvincia: ${provincia}\nÁrea: ${area}\nConsulta: ${mensaje}`
+    );
+
+    const waLink = `https://wa.me/${tel}?text=${textoWhatsApp}`;
+
+    // Feedback visual
+    const container = form.parentElement;
+    container.innerHTML = `
+      <div style="text-align: center; padding: 25px 10px;">
+        <div style="width: 70px; height: 70px; background: #eef7f0; color: #1b6330; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin: 0 auto 20px auto; border: 2px solid #25d366;">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 style="font-size: 1.6rem; color: var(--primary-navy); margin-bottom: 8px;">¡Consulta Recibida con Éxito!</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+          Estimado/a <strong>${nombre}</strong>, tu caso para la jurisdicción de <strong>${provincia}</strong> ha sido ingresado en nuestro sistema.
+        </p>
+        <p style="font-size: 0.88rem; color: var(--accent-green); font-weight: 700; margin-bottom: 24px;">
+          Para atención inmediata prioritaria, comunicate directo con la guardia de tu zona:
+        </p>
+        <a href="${waLink}" target="_blank" class="btn btn-whatsapp" style="font-size: 1rem; padding: 14px 28px; width: 100%; margin-bottom: 12px;">
+          <i class="fa-brands fa-whatsapp"></i> Continuar por WhatsApp con el Abogado
+        </a>
+        <button onclick="location.reload()" class="btn btn-outline" style="width: 100%; font-size: 0.85rem;">
+          Cargar otra consulta
+        </button>
+      </div>
+    `;
+  });
+}
+
+/**
+ * Talones interactivos que replican el flyer ("ARRANCÁ TU TELÉFONO DE CONTACTO")
+ */
+function initTearTabs() {
+  const tabs = document.querySelectorAll('.tear-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const phone = tab.getAttribute('data-phone') || '11 3461-4115';
+      const cleanPhone = phone.replace(/[^0-9]/g, '');
+
+      // Animación de arrancar
+      tab.classList.add('torn');
+
+      // Copiar al portapapeles
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(phone);
+      }
+
+      // Preguntar si quiere abrir WhatsApp directo
+      setTimeout(() => {
+        const abrir = confirm(`¡Arrancaste el teléfono ${phone}! (Copiado al portapapeles).\n\n¿Querés enviar un mensaje de WhatsApp ahora mismo al estudio?`);
+        if (abrir) {
+          window.open(`https://wa.me/549${cleanPhone}?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20legal%20con%20Valor%20y%20Asociados`, '_blank');
+        }
+      }, 250);
+    });
+  });
+}
+
+/**
+ * Menú móvil toggle
+ */
+function initMobileMenu() {
+  const toggle = document.getElementById('mobileToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      toggle.innerHTML = navLinks.classList.contains('open')
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    // Cerrar menú al hacer clic en un link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+  }
+}
+
+  </script>
 </body>
 </html>
