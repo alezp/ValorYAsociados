@@ -1,0 +1,33 @@
+---
+// Componente de Talones Recortables Interactivos
+const phones = [
+  "11 3461-4115",
+  "11 5473-5455",
+  "381 573-6202",
+  "11 3461-4115",
+  "11 5473-5455",
+  "381 573-6202",
+  "11 3461-4115",
+  "11 5473-5455",
+  "381 573-6202"
+];
+---
+
+<section class="tear-strip-section">
+  <div class="container">
+    <div class="tear-header">
+      <h4><i class="fa-solid fa-scissors"></i> ARRANCÁ TU TELÉFONO DE CONTACTO</h4>
+      <p>Hacé clic en cualquier talón para copiar el número de teléfono y contactarnos directo por WhatsApp</p>
+    </div>
+
+    <div class="tear-tabs-container">
+      {phones.map((phone) => (
+        <div class="tear-tab" data-phone={phone} title="Clic para arrancar y llamar">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span class="tear-phone">{phone}</span>
+          <span class="tear-action-hint">Arrancar</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

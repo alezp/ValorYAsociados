@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figma Prototype Mockup - Estudio Jurídico Valor y Asociados (Artificial Analysis Style)</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       FIGMA WORKSPACE UI STYLES (ARTIFICIAL ANALYSIS PALETTE)
+       ========================================================================== */
+    :root {
+      --figma-bg: #0B0E14;
+      --figma-panel: #11151F;
+      --figma-panel-border: rgba(255, 255, 255, 0.08);
+      --figma-header: #080A0F;
+      --figma-text: #FFFFFF;
+      --figma-text-muted: #94A3B8;
+      --figma-purple: #8842FD;
+      --figma-lavender: #C394FF;
+      --figma-canvas: #06070A;
+      --figma-canvas-grid: #121622;
+
+      /* Design System Tokens de Artificial Analysis */
+      --aa-purple: #8842FD;
+      --aa-lavender: #C394FF;
+      --aa-deep: #080A0F;
+      --aa-card: #121722;
+      --aa-green: #10B981;
+      --aa-cyan: #38BDF8;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+      background: var(--figma-bg);
+      color: var(--figma-text);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 1. FIGMA TOP TOOLBAR */
+    .figma-toolbar {
+      height: 52px;
+      background: var(--figma-header);
+      border-bottom: 1px solid var(--figma-panel-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      z-index: 100;
+    }
+
+    .toolbar-left, .toolbar-center, .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .figma-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #fff;
+    }
+
+    .figma-logo-icon {
+      width: 26px;
+      height: 26px;
+      background: linear-gradient(135deg, #8842FD, #6D28D9);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 0 12px rgba(136, 66, 253, 0.4);
+    }
+
+    .project-name {
+      font-size: 0.85rem;
+      color: var(--figma-text-muted);
+      border-left: 1px solid var(--figma-panel-border);
+      padding-left: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .project-name strong { color: #fff; }
+
+    .tool-group {
+      display: flex;
+      background: var(--figma-panel);
+      border-radius: 8px;
+      padding: 3px;
+      gap: 3px;
+      border: 1px solid var(--figma-panel-border);
+    }
+
+    .tool-btn {
+      background: none;
+      border: none;
+      color: var(--figma-text-muted);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .tool-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .tool-btn.active {
+      color: #fff;
+      background: var(--figma-purple);
+      box-shadow: 0 0 10px rgba(136, 66, 253, 0.4);
+    }
+
+    .share-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--figma-panel-border);
+      color: #fff;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .share-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .play-proto-btn {
+      background: linear-gradient(135deg, var(--figma-purple) 0%, #6D28D9 100%);
+      color: #fff;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(136, 66, 253, 0.4);
+    }
+
+    .play-proto-btn:hover {
+      background: linear-gradient(135deg, #9D62FE 0%, #7C3AED 100%);
+    }
+
+    /* 2. FIGMA MAIN BODY */
+    .figma-body {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* SIDEBAR IZQUIERDA */
+    .figma-sidebar-left {
+      width: 260px;
+      background: var(--figma-panel);
+      border-right: 1px solid var(--figma-panel-border);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      z-index: 10;
+    }
+
+    .sidebar-section-title {
+      padding: 14px 16px 6px 16px;
+      font-size: 0.72rem;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--figma-text-muted);
+      font-weight: 600;
+    }
+
+    .layer-item {
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .layer-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+    }
+
+    .layer-item.active {
+      background: rgba(136, 66, 253, 0.15);
+      color: var(--figma-lavender);
+      font-weight: 600;
+      border-left: 2px solid var(--figma-purple);
+    }
+
+    .layer-icon {
+      font-size: 0.8rem;
+      opacity: 0.85;
+    }
+
+    /* CANVAS CENTRAL */
+    .figma-canvas {
+      flex: 1;
+      background-color: var(--figma-canvas);
+      background-image: 
+        radial-gradient(ellipse at 50% 10%, rgba(136, 66, 253, 0.08) 0%, transparent 60%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 36px 36px, 36px 36px;
+      overflow: auto;
+      position: relative;
+      display: flex;
+      padding: 60px;
+      gap: 70px;
+      align-items: flex-start;
+      transition: transform 0.2s ease;
+    }
+
+    .figma-frame-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .frame-title-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--figma-text-muted);
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .frame-title-bar i { color: var(--figma-purple); }
+    .frame-title-bar .frame-dim {
+      font-size: 0.72rem;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .mockup-frame {
+      background: #080A0F;
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+      user-select: text;
+      position: relative;
+    }
+
+    .mockup-frame.desktop {
+      width: 1080px;
+      height: 820px;
+      overflow-y: auto;
+    }
+
+    .mockup-frame.mobile {
+      width: 375px;
+      height: 740px;
+      overflow-y: auto;
+      border-radius: 36px;
+      border: 8px solid #1a202c;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+    }
+
+    .mockup-frame.design-system {
+      width: 580px;
+      background: #0D111A;
+      color: #fff;
+      padding: 28px;
+      border-radius: 16px;
+      border: 1px solid rgba(136, 66, 253, 0.3);
+    }
+
+    /* SIDEBAR DERECHA */
+    .figma-sidebar-right {
+      width: 300px;
+      background: var(--figma-panel);
+      border-left: 1px solid var(--figma-panel-border);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      z-index: 10;
+    }
+
+    .inspect-tabs {
+      display: flex;
+      border-bottom: 1px solid var(--figma-panel-border);
+    }
+
+    .inspect-tab {
+      flex: 1;
+      padding: 12px 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      background: none;
+      border: none;
+      color: var(--figma-text-muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .inspect-tab.active {
+      color: #fff;
+      border-bottom-color: var(--figma-purple);
+    }
+
+    .inspect-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .prop-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    .prop-label { color: var(--figma-text-muted); }
+    .prop-val {
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 3px 6px;
+      border-radius: 4px;
+    }
+
+    .color-swatch-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      margin-bottom: 8px;
+      border: 1px solid var(--figma-panel-border);
+    }
+
+    .color-preview {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      flex-shrink: 0;
+    }
+
+    .code-box {
+      background: #080A0F;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--figma-lavender);
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .btn-copy {
+      background: rgba(136, 66, 253, 0.12);
+      border: 1px solid rgba(136, 66, 253, 0.3);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-copy:hover {
+      background: var(--figma-purple);
+      box-shadow: 0 0 15px rgba(136, 66, 253, 0.4);
+    }
+
+    .live-preview-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #080A0F;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. TOOLBAR SUPERIOR -->
+  <header class="figma-toolbar">
+    <div class="toolbar-left">
+      <div class="figma-logo">
+        <div class="figma-logo-icon">F</div>
+        <span>Figma Studio</span>
+      </div>
+      <div class="project-name">
+        <span>Estudio Jurídico</span>
+        <strong>Valor y Asociados</strong>
+        <span style="font-size: 0.72rem; color: var(--aa-lavender); font-family: 'JetBrains Mono', monospace;">• Artificial Analysis Design System</span>
+      </div>
+    </div>
+
+    <!-- Herramientas centrales -->
+    <div class="toolbar-center">
+      <div class="tool-group">
+        <button class="tool-btn active" id="toolMove" title="Move Tool (V)"><i class="fa-solid fa-arrow-pointer"></i></button>
+        <button class="tool-btn" id="toolZoomIn" title="Acercar (+)"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+        <button class="tool-btn" id="toolZoomOut" title="Alejar (-)"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+        <button class="tool-btn" id="toolResetZoom" title="100%">100%</button>
+      </div>
+
+      <div class="tool-group">
+        <button class="tool-btn active" id="btnViewAll" onclick="switchView('all')">Todos</button>
+        <button class="tool-btn" id="btnViewDesktop" onclick="switchView('desktop')"><i class="fa-solid fa-display"></i> Desktop</button>
+        <button class="tool-btn" id="btnViewMobile" onclick="switchView('mobile')"><i class="fa-solid fa-mobile-screen"></i> Mobile</button>
+        <button class="tool-btn" id="btnViewTokens" onclick="switchView('tokens')"><i class="fa-solid fa-palette"></i> Design Tokens</button>
+      </div>
+    </div>
+
+    <div class="toolbar-right">
+      <button class="play-proto-btn" onclick="openPrototypeLive()">
+        <i class="fa-solid fa-play"></i> Present (Live)
+      </button>
+      <button class="share-btn" onclick="copyProjectShare()">
+        <i class="fa-solid fa-share-nodes"></i> Compartir
+      </button>
+    </div>
+  </header>
+
+  <!-- 2. CUERPO DE FIGMA -->
+  <div class="figma-body">
+
+    <!-- SIDEBAR IZQUIERDA -->
+    <aside class="figma-sidebar-left">
+      <div class="sidebar-section-title">Páginas y Marcos</div>
+      <div class="layer-item active" onclick="focusFrame('frameDesktop')">
+        <span class="layer-icon"><i class="fa-solid fa-hashtag" style="color: var(--figma-purple);"></i></span>
+        <span>Desktop - 1440px Landing</span>
+      </div>
+      <div class="layer-item" onclick="focusFrame('frameMobile')">
+        <span class="layer-icon"><i class="fa-solid fa-hashtag" style="color: var(--figma-purple);"></i></span>
+        <span>Mobile - iPhone 14/15</span>
+      </div>
+      <div class="layer-item" onclick="focusFrame('frameTokens')">
+        <span class="layer-icon"><i class="fa-solid fa-swatchbook" style="color: var(--aa-lavender);"></i></span>
+        <span>Artificial Analysis Tokens</span>
+      </div>
+
+      <div class="sidebar-section-title" style="margin-top: 14px;">Componentes UI</div>
+      <div class="layer-item" onclick="inspectComponent('Área Penal (Card)', 'penal')">
+        <span class="layer-icon"><i class="fa-solid fa-cube" style="color: var(--aa-purple);"></i></span>
+        <span>Card: Área Penal</span>
+      </div>
+      <div class="layer-item" onclick="inspectComponent('Área Civil (Card)', 'civil')">
+        <span class="layer-icon"><i class="fa-solid fa-cube" style="color: var(--aa-cyan);"></i></span>
+        <span>Card: Área Civil</span>
+      </div>
+      <div class="layer-item" onclick="inspectComponent('Jubilados (Card)', 'jubilados')">
+        <span class="layer-icon"><i class="fa-solid fa-cube" style="color: var(--aa-green);"></i></span>
+        <span>Card: Jubilados/ANSES</span>
+      </div>
+      <div class="layer-item" onclick="inspectComponent('Chatbot Widget', 'chatbot')">
+        <span class="layer-icon"><i class="fa-solid fa-robot" style="color: var(--aa-lavender);"></i></span>
+        <span>Widget: Bot Legal IA</span>
+      </div>
+      <div class="layer-item" onclick="inspectComponent('Talones Recortables', 'tear')">
+        <span class="layer-icon"><i class="fa-solid fa-scissors" style="color: var(--aa-green);"></i></span>
+        <span>Tear-Strip Cupón</span>
+      </div>
+    </aside>
+
+    <!-- LIENZO DE DISEÑO (CANVAS) -->
+    <main class="figma-canvas" id="canvasViewport">
+
+      <!-- MARCO 1: DESKTOP LANDING -->
+      <div class="figma-frame-wrapper" id="frameDesktop">
+        <div class="frame-title-bar">
+          <i class="fa-solid fa-hashtag"></i>
+          <span>Desktop Landing Page</span>
+          <span class="frame-dim">1080 x 820</span>
+        </div>
+        <div class="mockup-frame desktop">
+          <iframe src="index.html" class="live-preview-iframe" id="desktopIframe" title="Desktop Mockup"></iframe>
+        </div>
+      </div>
+
+      <!-- MARCO 2: MOBILE -->
+      <div class="figma-frame-wrapper" id="frameMobile">
+        <div class="frame-title-bar">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <span>Mobile Device (iOS / Android)</span>
+          <span class="frame-dim">375 x 740</span>
+        </div>
+        <div class="mockup-frame mobile">
+          <iframe src="index.html" class="live-preview-iframe" id="mobileIframe" title="Mobile Mockup"></iframe>
+        </div>
+      </div>
+
+      <!-- MARCO 3: DESIGN TOKENS ARTIFICIAL ANALYSIS -->
+      <div class="figma-frame-wrapper" id="frameTokens">
+        <div class="frame-title-bar">
+          <i class="fa-solid fa-swatchbook"></i>
+          <span>Artificial Analysis Design System</span>
+          <span class="frame-dim">580 x Auto</span>
+        </div>
+        <div class="mockup-frame design-system">
+          <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 4px; font-weight: 700; letter-spacing: -0.02em;">
+            VALOR Y ASOCIADOS
+          </h3>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 22px;">
+            Inspirado en la arquitectura visual de artificialanalysis.ai.
+          </p>
+
+          <!-- Paleta de Colores -->
+          <h4 style="font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--aa-lavender); margin-bottom: 12px; text-transform: uppercase;">
+            1. Core Palette (Dark SaaS / Tech)
+          </h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px;">
+            <div class="color-swatch-item">
+              <div class="color-preview" style="background: #8842FD; box-shadow: 0 0 10px #8842FD;"></div>
+              <div>
+                <strong style="font-size: 0.82rem; display: block; color: #fff;">Electric Violet</strong>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #aaa;">#8842FD • Primary</span>
+              </div>
+            </div>
+            <div class="color-swatch-item">
+              <div class="color-preview" style="background: #080A0F; border: 1px solid #333;"></div>
+              <div>
+                <strong style="font-size: 0.82rem; display: block; color: #fff;">Deep Canvas</strong>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #aaa;">#080A0F • Background</span>
+              </div>
+            </div>
+            <div class="color-swatch-item">
+              <div class="color-preview" style="background: #121722; border: 1px solid #333;"></div>
+              <div>
+                <strong style="font-size: 0.82rem; display: block; color: #fff;">Card Surface</strong>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #aaa;">#121722 • Hairline</span>
+              </div>
+            </div>
+            <div class="color-swatch-item">
+              <div class="color-preview" style="background: #10B981; box-shadow: 0 0 10px #10B981;"></div>
+              <div>
+                <strong style="font-size: 0.82rem; display: block; color: #fff;">Live Status Green</strong>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #aaa;">#10B981 • Realtime</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tipografía -->
+          <h4 style="font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--aa-lavender); margin-bottom: 12px; text-transform: uppercase;">
+            2. Typography Stack (Suisse Neo-Grotesk)
+          </h4>
+          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 24px;">
+            <div style="margin-bottom: 12px;">
+              <span style="font-size: 1.25rem; font-weight: 700; display: block; color: #fff; letter-spacing: -0.025em;">
+                Plus Jakarta Sans / Suisse Int'l
+              </span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-secondary);">
+                Títulos, Navegación y Cuerpo de Alta Densidad y Nitidez
+              </span>
+            </div>
+            <div>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 500; display: block; color: var(--aa-lavender);">
+                JetBrains Mono
+              </span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-secondary);">
+                Badges, Teléfonos, Métricas y Micro-etiquetas
+              </span>
+            </div>
+          </div>
+
+          <!-- Componentes Clave -->
+          <h4 style="font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--aa-lavender); margin-bottom: 12px; text-transform: uppercase;">
+            3. Buttons & Controls
+          </h4>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button style="padding: 10px 20px; border-radius: 999px; background: linear-gradient(135deg, #8842FD, #6D28D9); color: #fff; font-weight: 600; border: none; font-size: 0.82rem; box-shadow: 0 0 15px rgba(136,66,253,0.4); cursor: pointer;">
+              Button Primary
+            </button>
+            <button style="padding: 10px 20px; border-radius: 999px; background: #10B981; color: #fff; font-weight: 600; border: none; font-size: 0.82rem; cursor: pointer;">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp CTA
+            </button>
+            <button style="padding: 10px 20px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: #fff; font-weight: 600; font-size: 0.82rem; cursor: pointer;">
+              Secondary Outline
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- SIDEBAR DERECHA: INSPECT -->
+    <aside class="figma-sidebar-right">
+      <div class="inspect-tabs">
+        <button class="inspect-tab active" id="tabDesign">Design</button>
+        <button class="inspect-tab" id="tabInspect">Inspect (CSS)</button>
+      </div>
+
+      <div class="inspect-content" id="inspectPanel">
+        <div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; color: var(--figma-text-muted); font-weight: 600;">Componente Seleccionado</span>
+          <h4 id="selectedCompName" style="color: #fff; font-size: 1rem; margin-top: 4px;">Landing Page Principal</h4>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="prop-row">
+            <span class="prop-label">Ancho (Desktop)</span>
+            <span class="prop-val" id="propWidth">1440 px</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-label">Border Radius</span>
+            <span class="prop-val" id="propRadius">16px (lg) / 22px (xl)</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-label">Primary Color</span>
+            <span class="prop-val" id="propColor">#8842FD (Violet)</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-label">Background</span>
+            <span class="prop-val" id="propBg">#080A0F (Deep)</span>
+          </div>
+        </div>
+
+        <div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; color: var(--figma-text-muted); font-weight: 600; margin-bottom: 8px; display: block;">CSS Tokens</span>
+          <div class="code-box" id="inspectCssBox">/* Artificial Analysis Tokens */
+background: #080A0F;
+color: #FFFFFF;
+font-family: 'Plus Jakarta Sans', sans-serif;
+border: 1px solid rgba(255,255,255,0.08);
+border-radius: 16px;</div>
+        </div>
+
+        <button class="btn-copy" onclick="copyCssSnippet()">
+          <i class="fa-solid fa-copy"></i> Copiar Código CSS
+        </button>
+
+        <div style="border-top: 1px solid var(--figma-panel-border); padding-top: 14px;">
+          <a href="index.html" target="_blank" style="font-size: 0.8rem; color: var(--aa-lavender); display: flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Landing Page en vivo
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script>
+    let currentZoom = 1;
+    const canvas = document.getElementById('canvasViewport');
+
+    document.getElementById('toolZoomIn').addEventListener('click', () => {
+      currentZoom = Math.min(currentZoom + 0.15, 1.8);
+      applyZoom();
+    });
+
+    document.getElementById('toolZoomOut').addEventListener('click', () => {
+      currentZoom = Math.max(currentZoom - 0.15, 0.45);
+      applyZoom();
+    });
+
+    document.getElementById('toolResetZoom').addEventListener('click', () => {
+      currentZoom = 1;
+      applyZoom();
+    });
+
+    function applyZoom() {
+      canvas.style.transform = `scale(${currentZoom})`;
+      canvas.style.transformOrigin = 'top left';
+      document.getElementById('toolResetZoom').textContent = Math.round(currentZoom * 100) + '%';
+    }
+
+    function switchView(view) {
+      document.getElementById('frameDesktop').style.display = (view === 'all' || view === 'desktop') ? 'flex' : 'none';
+      document.getElementById('frameMobile').style.display = (view === 'all' || view === 'mobile') ? 'flex' : 'none';
+      document.getElementById('frameTokens').style.display = (view === 'all' || view === 'tokens') ? 'flex' : 'none';
+
+      document.querySelectorAll('.tool-group button').forEach(b => b.classList.remove('active'));
+      if (view === 'all') document.getElementById('btnViewAll').classList.add('active');
+      if (view === 'desktop') document.getElementById('btnViewDesktop').classList.add('active');
+      if (view === 'mobile') document.getElementById('btnViewMobile').classList.add('active');
+      if (view === 'tokens') document.getElementById('btnViewTokens').classList.add('active');
+    }
+
+    function focusFrame(frameId) {
+      const el = document.getElementById(frameId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    }
+
+    const COMPONENT_DATA = {
+      penal: {
+        name: "Card: Área Penal (Flyer)",
+        w: "360px",
+        radius: "22px",
+        color: "#8842FD",
+        bg: "#121722",
+        css: `background: #121722;
+border: 1px solid rgba(136, 66, 253, 0.28);
+border-radius: 22px;
+header: linear-gradient(180deg, rgba(136,66,253,0.15), transparent);
+box-shadow: 0 0 30px rgba(136, 66, 253, 0.15);`
+      },
+      civil: {
+        name: "Card: Área Civil & Comercial",
+        w: "360px",
+        radius: "22px",
+        color: "#38BDF8",
+        bg: "#121722",
+        css: `background: #121722;
+border: 1px solid rgba(56, 189, 248, 0.28);
+border-radius: 22px;
+header: linear-gradient(180deg, rgba(56,189,248,0.15), transparent);`
+      },
+      jubilados: {
+        name: "Card: Jubilados y Pensionados (ANSES)",
+        w: "360px",
+        radius: "22px",
+        color: "#10B981",
+        bg: "#121722",
+        css: `background: #121722;
+border: 1px solid rgba(16, 185, 129, 0.28);
+border-radius: 22px;
+header: linear-gradient(180deg, rgba(16,185,129,0.15), transparent);`
+      },
+      chatbot: {
+        name: "Widget: Bot Legal IA con Derivación",
+        w: "380px",
+        radius: "22px",
+        color: "#8842FD",
+        bg: "#121722",
+        css: `position: fixed;
+bottom: calc(20px + env(safe-area-inset-bottom));
+right: calc(20px + env(safe-area-inset-right));
+border-radius: 22px;
+background: #121722;
+border: 1px solid rgba(136, 66, 253, 0.28);`
+      },
+      tear: {
+        name: "Talones Recortables 'Arrancá tu teléfono'",
+        w: "108px",
+        radius: "10px",
+        color: "#10B981",
+        bg: "#121722",
+        css: `border: 1px dashed rgba(136, 66, 253, 0.35);
+background: #121722;
+writing-mode: vertical-rl;
+transform: rotate(180deg);
+color: #FFFFFF; font-family: 'JetBrains Mono', monospace;`
+      }
+    };
+
+    function inspectComponent(name, key) {
+      const data = COMPONENT_DATA[key];
+      if (!data) return;
+
+      document.getElementById('selectedCompName').textContent = data.name;
+      document.getElementById('propWidth').textContent = data.w;
+      document.getElementById('propRadius').textContent = data.radius;
+      document.getElementById('propColor').textContent = data.color;
+      document.getElementById('propBg').textContent = data.bg;
+      document.getElementById('inspectCssBox').textContent = data.css;
+
+      focusFrame('frameDesktop');
+    }
+
+    function copyCssSnippet() {
+      const css = document.getElementById('inspectCssBox').textContent;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(css);
+        alert("¡Código CSS de Artificial Analysis copiado!");
+      }
+    }
+
+    function openPrototypeLive() { window.open('index.html', '_blank'); }
+    function copyProjectShare() {
+      navigator.clipboard.writeText(window.location.href);
+      alert("Enlace del mockup copiado para compartir con tu equipo.");
+    }
+  </script>
+</body>
+</html>

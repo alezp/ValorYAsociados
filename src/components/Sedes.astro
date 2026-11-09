@@ -1,0 +1,29 @@
+---
+import { CONTACTO_OFICIAL } from '../data/legalData.js';
+---
+
+<section class="sedes-section" id="sedes">
+  <div class="container">
+    <div style="text-align: center;">
+      <span class="section-tag">Presencia Física</span>
+      <h2 class="section-title">Nuestras Sedes y Oficinas de Atención</h2>
+      <p class="section-subtitle">Oficinas preparadas para recibirte con privacidad y profesionalismo.</p>
+    </div>
+
+    <div class="sedes-grid">
+      {CONTACTO_OFICIAL.sedes.map((sede) => (
+        <div class="sede-card">
+          <div class="sede-icon">
+            <i class={`fa-solid ${sede.icono}`}></i>
+          </div>
+          <h4>{sede.provincia}</h4>
+          <span class="sede-subtitle">{sede.subtitulo}</span>
+          <p class="sede-address">
+            <strong>{sede.direccion}</strong><br />
+            {sede.detalle}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

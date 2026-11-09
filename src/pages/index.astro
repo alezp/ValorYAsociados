@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Topbar from '../components/Topbar.astro';
+import Navbar from '../components/Navbar.astro';
+import HeroSlider from '../components/HeroSlider.astro';
+import Pillars from '../components/Pillars.astro';
+import PracticeAreas from '../components/PracticeAreas.astro';
+import VideoGallery from '../components/VideoGallery.astro';
+import ConsultationForm from '../components/ConsultationForm.astro';
+import Sedes from '../components/Sedes.astro';
+import TearStrip from '../components/TearStrip.astro';
+import Footer from '../components/Footer.astro';
+import Chatbot from '../components/Chatbot.astro';
+import AdminModal from '../components/AdminModal.astro';
+---
+
+<Layout>
+  <Topbar />
+  <Navbar />
+  <HeroSlider />
+  <Pillars />
+  <PracticeAreas />
+
+  <!-- BANNER DESTACADO DE CONSULTA Y WHATSAPP -->
+  <section style="background: linear-gradient(135deg, #1b6330, #0f401d); padding: 50px 0; color: #fff; text-align: center;">
+    <div class="container">
+      <i class="fa-brands fa-whatsapp" style="font-size: 3.5rem; color: #25d366; margin-bottom: 16px;"></i>
+      <h2 style="font-size: 2.2rem; color: #fff; margin-bottom: 12px; font-family: var(--font-heading);">
+        CONSULTÁ TU CASO EN LÍNEA
+      </h2>
+      <p style="font-size: 1.1rem; max-width: 650px; margin: 0 auto 30px auto; color: rgba(255,255,255,0.9);">
+        Elegí tu provincia, contanos brevemente lo sucedido y recibí la respuesta inmediata de nuestros abogados u operadores.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="https://wa.me/5491134614115?text=Hola%2C%20quisiera%20consultar%20mi%20caso%20con%20Valor%20y%20Asociados" target="_blank" class="btn btn-whatsapp" style="font-size: 1.05rem; padding: 14px 30px;">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp CABA (11 3461-4115)
+        </a>
+        <a href="https://wa.me/5493815736202?text=Hola%2C%20quisiera%20consultar%20mi%20caso%20con%20Valor%20y%20Asociados" target="_blank" class="btn btn-whatsapp" style="font-size: 1.05rem; padding: 14px 30px;">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Tucumán / NOA (381 573-6202)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <VideoGallery />
+  <ConsultationForm />
+  <Sedes />
+  <TearStrip />
+  <Footer />
+
+  <Chatbot />
+  <AdminModal />
+</Layout>

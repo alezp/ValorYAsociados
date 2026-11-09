@@ -1,0 +1,20 @@
+---
+// Componente de Galería de Videos Explicativos
+---
+<section class="videos-section" id="videos">
+  <div class="container">
+    <div class="videos-header-row">
+      <div>
+        <span class="section-tag">Educación Legal y Consejos Prácticos</span>
+        <h2 class="section-title" style="text-align: left; margin-bottom: 0;">Videos y Guías para Clientes</h2>
+      </div>
+      <button class="btn btn-outline" onclick="window.mediaManagerInstance && window.mediaManagerInstance.openModal()" style="font-size: 0.85rem;">
+        <i class="fa-solid fa-cloud-arrow-up"></i> Cargar nuevo Video o Banner
+      </button>
+    </div>
+
+    <div class="videos-grid" id="videosGrid">
+      <!-- Renderizado dinámico desde MediaManager -->
+    </div>
+  </div>
+</section>

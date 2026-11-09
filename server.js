@@ -1,6 +1,10 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
+import http from 'http';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const PORT = process.env.PORT || 3000;
 
@@ -22,31 +26,27 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
-  // Limpiar query params y decodificar URI
   let reqPath = decodeURI(req.url.split('?')[0]);
   if (reqPath === '/') {
     reqPath = '/index.html';
   }
 
-  // Sanitizar path para evitar Directory Traversal
   const safeSuffix = path.normalize(reqPath).replace(/^(\.\.[\/\\])+/, '');
   const filePath = path.join(__dirname, safeSuffix);
 
   fs.stat(filePath, (err, stats) => {
     if (err || !stats.isFile()) {
-      // Si piden un archivo estático que no existe, retornar 404 (NUNCA index.html con mime text/html)
       const ext = path.extname(reqPath);
       if (ext && ext !== '.html') {
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
         res.end(`404 - Not Found: ${reqPath}`);
         return;
       }
       
-      // Si no es un asset y no se encontró, servir index.html (modo SPA)
       const indexPath = path.join(__dirname, 'index.html');
       fs.readFile(indexPath, (indexErr, indexContent) => {
         if (indexErr) {
-          res.writeHead(500, { 'Content-Type': 'text/plain' });
+          res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
           res.end('500 - Error cargando index.html');
           return;
         }
@@ -61,7 +61,7 @@ const server = http.createServer((req, res) => {
 
     fs.readFile(filePath, (readErr, content) => {
       if (readErr) {
-        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
         res.end('500 - Error leyendo archivo');
         return;
       }
