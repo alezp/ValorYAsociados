@@ -1,0 +1,8 @@
+# robots.txt - Estudio Jurídico Valor y Asociados
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /dist/
+
+# Sitemap
+Sitemap: https://www.valoryasociados.com.ar/sitemap.xml
